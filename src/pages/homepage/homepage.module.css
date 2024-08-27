@@ -1,0 +1,6 @@
+@import "../../index.css";
+
+.pageWrapper {
+  margin-left: var(--s-7);
+  margin-right: var(--s-7);
+}
