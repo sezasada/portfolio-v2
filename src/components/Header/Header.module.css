@@ -1,0 +1,14 @@
+@import '../../index.css';
+
+.titleStyles {
+  font-size: var(--text-5xl);
+}
+
+.subTitleStyles {
+  font-size: var(--text-2xl);
+}
+
+.contactButton {
+  flex-basis: var(--w-2-3);
+
+}

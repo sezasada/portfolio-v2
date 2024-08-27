@@ -1,0 +1,127 @@
+@import "../../index.css";
+@import "../../marketplace.css";
+
+.root {
+  padding: var(--s-3) var(--s-10);
+  border: 1px solid transparent;
+  font-weight: var(--font-medium);
+  border-radius: var(--border-radius-xxxl);
+  border-color: var(--gray-600);
+  background-color: var(--white);
+  display: inline-block;
+  cursor: pointer;
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+
+  &:disabled {
+    opacity: var(--o-50);
+    pointer-events: none;
+  }
+}
+
+.root:hover {
+  text-decoration: none;
+}
+
+.small {
+  padding: var(--s-2) var(--s-8);
+}
+
+.bold {
+  font-weight: var(--font-bold);
+}
+
+.inlineTextButtonRoot {
+  cursor: pointer;
+  font-family: var(--font-base);
+}
+
+.primaryButton {
+  background-color: var(--brand);
+  color: var(--white);
+  border-color: var(--brand);
+}
+
+.primaryButton:hover {
+  background-color: var(--olive-600);
+  border-color: var(--olive-600);
+}
+
+.secondaryButton {
+  color: var(--gray-900);
+  border-color: var(--gray-900);
+}
+
+.secondaryButton:hover {
+  background-color: var(--gray-900);
+  color: var(--white);
+}
+
+.tertiaryButton {
+  background-color: var(--gray-900);
+  border-color: var(--gray-900);
+  color: var(--white);
+}
+
+.tertiaryButton:hover {
+  background-color: var(--gray-900);
+  border-color: var(--gray-900);
+  color: var(--white);
+}
+
+.quaternaryButton {
+  background-color: var(--yellow-500);
+  border-color: var(--black);
+  color: var(--gray-900);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.27);
+}
+
+.quaternaryButton:hover {
+  background-color: var(--yellow-600);
+  border-color: var(--black);
+  color: var(--gray-900);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.spinner {
+  width: var(--s-7);
+  height: var(--s-5);
+  stroke: var(--matterColorLight);
+  stroke-width: 3px;
+}
+
+.checkmark {
+  width: 24px;
+  height: 24px;
+
+  /* Animation */
+  animation-name: checkmarkAnimation;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+}
+
+@keyframes checkmarkAnimation {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.secondaryButton .spinner {
+  stroke: var(--matterColorAnti);
+}
+
+.secondaryButton .checkmark {
+  stroke: var(--matterColorAnti);
+}
