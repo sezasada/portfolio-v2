@@ -1,14 +1,37 @@
 @import '../../index.css';
 
+.wrapperStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-family: var(--font-base);
+  background-color: var(--gray-400);
+  width: 100%;
+  height: var(--s-230);
+}
+
+.contentStyles {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  width: 100%;
+  padding-left: var(--s-20);
+}
+
 .titleStyles {
-  font-size: var(--text-5xl);
+  font-size: var(--text-7xl);
+  font-weight: var(--font-bolder);
+  margin-bottom: var(--s-8);
 }
 
 .subTitleStyles {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--s-8);
 }
 
 .contactButton {
-  flex-basis: var(--w-2-3);
-
+  font-size: var(--text-lg);
+  font-weight: var(--font-light);
+  padding: var(--s-4) var(--s-7);
 }

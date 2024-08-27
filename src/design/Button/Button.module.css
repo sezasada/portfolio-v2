@@ -50,6 +50,9 @@
 .secondaryButton {
   color: var(--gray-900);
   border-color: var(--gray-900);
+  border: 2px solid var(--gray-900);
+  border-radius: 0;
+  background-color: transparent;
 }
 
 .secondaryButton:hover {
