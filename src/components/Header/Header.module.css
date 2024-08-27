@@ -1,9 +1,9 @@
-@import '../../index.css';
+@import "../../index.css";
 
 .wrapperStyles {
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
   font-family: var(--font-base);
   background-color: var(--gray-400);
   width: 100%;
@@ -13,9 +13,9 @@
 .contentStyles {
   display: flex;
   flex-direction: column;
-  align-items: left;
+  align-items: flex-start;
   justify-content: center;
-  width: 100%;
+  width: 60%;
   padding-left: var(--s-20);
 }
 
@@ -34,4 +34,27 @@
   font-size: var(--text-lg);
   font-weight: var(--font-light);
   padding: var(--s-4) var(--s-7);
+}
+
+.imageContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: var(--s-165);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.headerImage {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
 }

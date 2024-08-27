@@ -1,6 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { SecondaryButton } from "../../design/Button/Button";
+import profileImage from "@public/images/header-images/profile-image.png";
 import css from "./Header.module.css";
 
 const Header = () => {
@@ -19,6 +20,11 @@ const Header = () => {
               <FormattedMessage id="Header.contactButton" />
             </div>
           </SecondaryButton>
+        </div>
+      </div>
+      <div className={css.imageContainer}>
+        <div className={css.imageWrapper}>
+          <img src={profileImage} alt="sebastien" className={css.headerImage} />
         </div>
       </div>
     </div>
