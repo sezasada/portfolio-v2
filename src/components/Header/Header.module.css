@@ -1,14 +1,61 @@
-@import '../../index.css';
+@import "../../index.css";
+
+.wrapperStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-base);
+  background-color: var(--gray-400);
+  width: 100%;
+  height: var(--s-230);
+}
+
+.contentStyles {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60%;
+  padding-left: var(--s-40);
+}
 
 .titleStyles {
-  font-size: var(--text-5xl);
+  font-size: var(--text-7xl);
+  font-weight: var(--font-bolder);
+  margin-bottom: var(--s-8);
 }
 
 .subTitleStyles {
-  font-size: var(--text-2xl);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--s-8);
 }
 
 .contactButton {
-  flex-basis: var(--w-2-3);
+  font-size: var(--text-lg);
+  font-weight: var(--font-light);
+  padding: var(--s-4) var(--s-7);
+}
 
+.imageContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: var(--s-40);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: var(--s-165);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.headerImage {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
 }
