@@ -33,6 +33,24 @@
   text-align: left;
 }
 
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.logoStyles {
+  height: var(--s-8);
+  width: var(--s-8);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
 .nameWrapper {
   font-family: var(--font-base);
   font-weight: var(--font-medium);

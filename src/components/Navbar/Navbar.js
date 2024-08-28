@@ -4,6 +4,7 @@ import css from "./Navbar.module.css";
 import { ReactComponent as InstagramSquare } from "@public/icons/instagram.svg";
 import { ReactComponent as LinkedinSquare } from "@public/icons/linkedin.svg";
 import { ReactComponent as Github } from "@public/icons/github.svg";
+import { ReactComponent as Dev } from "@public/icons/dev.svg";
 
 const Navbar = () => {
   return (
@@ -11,11 +12,18 @@ const Navbar = () => {
       <div className={css.topSection}>
         <div className={css.leftSideStyles}>
           <div className={css.logoWrapper}>
-            <div className={css.nameWrapper}>
-              <FormattedMessage id="Navbar.firstName" />
+            <div className={css.logoStyles}>
+              <div className={css.iconWrapper}>
+                <Dev />
+              </div>
             </div>
-            <div className={css.titleWrapper}>
-              <FormattedMessage id="Navbar.title" />
+            <div>
+              <div className={css.nameWrapper}>
+                <FormattedMessage id="Navbar.firstName" />
+              </div>
+              <div className={css.titleWrapper}>
+                <FormattedMessage id="Navbar.title" />
+              </div>
             </div>
           </div>
         </div>
