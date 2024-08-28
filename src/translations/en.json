@@ -11,5 +11,11 @@
   "Navbar.aboutMe": "About Me",
   "Navbar.projects": "Featured Projects",
   "Navbar.testimonials": "Testimonials",
-  "Navbar.contactMe": "Contact Me"
+  "Navbar.contactMe": "Contact Me",
+  "Skills.javascript": "JavaScript",
+  "Skills.typescript": "TypeScript",
+  "Skills.graphql": "GraphQL",
+  "Skills.html": "HTML",
+  "Skills.css": "CSS",
+  "Skills.aws": "AWS"
 }
