@@ -6,8 +6,12 @@ import css from "./homepage.module.css";
 const Homepage = () => {
   return (
     <div className={css.pageWrapper}>
-      <Navbar />
-      <Header />
+      <div className={css.navbarWrapper}>
+        <Navbar />
+      </div>
+      <div>
+        <Header />
+      </div>
     </div>
   );
 };

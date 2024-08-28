@@ -1,5 +1,15 @@
 {
   "Header.title": "Hello, I'm Sebastien!",
   "Header.subTitle": "Software Engineer at LandTrust",
-  "Header.contactButton": "Contact Me"
+  "Header.contactButton": "Contact Me",
+  "Navbar.firstName": "Sebastien Zasada",
+  "Navbar.title": "Sofware Engineer",
+  "Navbar.contactCta": "Write Me",
+  "Navbar.emailCta": "sezasada@icloud.com",
+  "Navbar.phoneCta": "Call Me",
+  "Navbar.phoneNumberCta": "+1 (218) 790 0487",
+  "Navbar.aboutMe": "About Me",
+  "Navbar.projects": "Featured Projects",
+  "Navbar.testimonials": "Testimonials",
+  "Navbar.contactMe": "Contact Me"
 }
