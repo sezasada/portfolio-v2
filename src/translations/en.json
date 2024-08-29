@@ -17,5 +17,9 @@
   "Skills.graphql": "GraphQL",
   "Skills.html": "HTML",
   "Skills.css": "CSS",
-  "Skills.aws": "AWS"
+  "Skills.redux": "Redux",
+  "Skills.react": "React",
+  "Skills.next": "Next",
+  "Skills.aws": "AWS",
+  "Skills.tailwind": "Tailwind"
 }
