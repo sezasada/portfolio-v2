@@ -96,6 +96,9 @@ const Skills = () => {
 
   return (
     <div className={css.wrapperStyles}>
+      <div className={css.titleStyles}>
+        <FormattedMessage id="Skills.title" />
+      </div>
       <div className={css.carouselWrapper}>
         <div className={css.controlsContainer}>
           {skills.length > 1 && (
@@ -106,12 +109,12 @@ const Skills = () => {
                 type="button"
                 aria-label="Previous skill"
               />
-              <div className={css.skillsWrapper}>
+              <div className={css.skillsContainer}>
                 <div className={css.skillsWrapper}>
                   {displayedSkills.map(({ id, Icon }, index) => (
                     <div key={index} className={css.skillWrapper}>
                       {Icon && (
-                        <div className={css.iconWrapper}>
+                        <div>
                           <Icon className={css.iconStyles} />
                         </div>
                       )}
