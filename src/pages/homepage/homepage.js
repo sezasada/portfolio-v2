@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
+import Skills from "../../components/Skills/Skills";
 import css from "./homepage.module.css";
 
 const Homepage = () => {
@@ -11,6 +12,9 @@ const Homepage = () => {
       </div>
       <div>
         <Header />
+      </div>
+      <div>
+        <Skills />
       </div>
     </div>
   );
