@@ -1,0 +1,48 @@
+.wrapperStyles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--s-10);
+  gap: var(--s-6);
+}
+
+.sectionImage {
+  width: var(--s-100);
+  height: auto;
+}
+
+.boxStylesOne {
+  background-color: var(--green-400);
+  margin-top: var(--s-10);
+  width: var(--s-20);
+  height: var(--s-80);
+}
+
+.boxStylesTwo {
+  background-color: var(--green-400);
+  margin-top: var(--s-10);
+  width: var(--s-6);
+  height: var(--s-80);
+}
+
+.columnOne,
+.columnTwo {
+  flex-basis: 50%;
+}
+
+.columnOne {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: var(--s-140);
+}
+
+.columnTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: var(--s-140);
+}
