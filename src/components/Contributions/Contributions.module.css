@@ -4,9 +4,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--gray-400);
-  margin-bottom: var(--s-20);
-  padding-top: var(--s-10);
+  background-color: var(--green-400);
+  margin-bottom: var(--s-10);
+  padding-top: var(--s-24);
+  padding-bottom: var(--s-24);
 }
 
 .wrapperStyles {
@@ -20,7 +21,7 @@
 }
 
 .divider {
-  background-color: var(--gray-500);
+  background-color: var(--gray-900);
   height: 1px;
   border: none;
 }
@@ -34,7 +35,7 @@
 
 .titleStyles {
   display: flex;
-  font-size: var(--text-4xl);
+  font-size: var(--text-5xl);
   font-family: var(--font-base);
   font-weight: var(--font-bolder);
   color: var(--gray-900);

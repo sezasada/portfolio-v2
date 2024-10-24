@@ -4,6 +4,7 @@ import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Skills from "../../components/Skills/Skills";
 import Contributions from "../../components/Contributions/Contributions";
+import Testimonials from "../../components/Testimonials/Testimonials";
 import css from "./homepage.module.css";
 
 const Homepage = () => {
@@ -23,6 +24,9 @@ const Homepage = () => {
       </div>
       <div>
         <Contributions />
+      </div>
+      <div>
+        <Testimonials />
       </div>
     </div>
   );

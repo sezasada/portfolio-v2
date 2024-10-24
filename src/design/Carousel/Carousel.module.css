@@ -4,7 +4,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   width: 100%;
-  background-color: var(--gray-400);
 }
 
 .skillsContainer {
@@ -50,8 +49,8 @@
 .videoStyles,
 .imageStyles {
   display: block;
-  width: var(--s-285);
-  max-height: var(--s-127);
+  width: 740px;
+  max-height: 450px;
   object-fit: cover;
 }
 
