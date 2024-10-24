@@ -1,0 +1,47 @@
+@import "../../index.css";
+
+.containerStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperStyles {
+  display: block;
+  width: var(--s-320);
+  margin-left: var(--s-44);
+}
+
+.divider {
+  background-color: var(--gray-500);
+  height: 1px;
+  border: none;
+}
+
+.titleStyles {
+  display: flex;
+  font-size: var(--text-4xl);
+  font-family: var(--font-base);
+  font-weight: var(--font-bolder);
+  color: var(--gray-900);
+  margin-bottom: var(--s-7);
+}
+
+.subtitleStyles {
+  display: flex;
+  font-size: var(--text-base);
+  font-family: var(--font-base);
+  font-weight: var(--font-normal);
+  color: var(--gray-700);
+  margin-bottom: var(--s-3);
+}
+
+.serviceStyles {
+  display: flex;
+  font-size: var(--text-base);
+  font-family: var(--font-base);
+  font-weight: var(--font-normal);
+  color: var(--gray-700);
+  margin-bottom: var(--s-3);
+  margin-top: var(--s-10);
+}
