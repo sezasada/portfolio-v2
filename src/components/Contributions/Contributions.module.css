@@ -4,17 +4,31 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--gray-400);
+  margin-bottom: var(--s-20);
+  padding-top: var(--s-10);
 }
 
 .wrapperStyles {
   display: block;
-  width: var(--s-320);
-  margin-left: var(--s-44);
+  width: 100%;
+}
+
+.bodyStyles {
+  display: block;
+  margin-left: var(--s-73);
 }
 
 .divider {
   background-color: var(--gray-500);
   height: 1px;
+  border: none;
+}
+
+.dividerTwo {
+  background-color: var(--gray-500);
+  height: 1px;
+  margin-top: var(--s-10);
   border: none;
 }
 
@@ -43,5 +57,5 @@
   font-weight: var(--font-normal);
   color: var(--gray-700);
   margin-bottom: var(--s-3);
-  margin-top: var(--s-10);
+  margin-top: var(--s-7);
 }

@@ -26,21 +26,24 @@ const Contributions = () => {
   return (
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>
-        <div className={css.titleStyles}>
-          <FormattedMessage id="Contributions.title" />
+        <div className={css.bodyStyles}>
+          <div className={css.titleStyles}>
+            <FormattedMessage id="Contributions.title" />
+          </div>
+          <div className={css.subtitleStyles}>
+            <FormattedMessage id="Contributions.subtitle" />
+          </div>
+          <hr className={css.divider} />
+          <div className={css.serviceStyles}>
+            <FormattedMessage id="Contributions.landtrustCopy" />
+          </div>
+          <Carousel items={landtrustContributions} />
+          <hr className={css.dividerTwo} />
+          <div className={css.serviceStyles}>
+            <FormattedMessage id="Contributions.personalCopy" />
+          </div>
+          <Carousel items={skillsTwo} />
         </div>
-        <div className={css.subtitleStyles}>
-          <FormattedMessage id="Contributions.subtitle" />
-        </div>
-        <hr className={css.divider} />
-        <div className={css.serviceStyles}>
-          <FormattedMessage id="Contributions.landtrustCopy" />
-        </div>
-        <Carousel items={landtrustContributions} />
-        <div className={css.serviceStyles}>
-          <FormattedMessage id="Contributions.personalCopy" />
-        </div>
-        <Carousel items={skillsTwo} />
       </div>
     </div>
   );

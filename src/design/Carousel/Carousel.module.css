@@ -1,32 +1,42 @@
 .carouselWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 100%;
   background-color: var(--gray-400);
-  padding-top: var(--s-10);
-  padding-bottom: var(--s-10);
+}
+
+.skillsContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.skillsWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
 }
 
 .controlsContainer {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  width: 70vw;
+  margin-top: var(--s-5);
 }
 
 .prev,
 .next {
   width: var(--s-8);
   height: var(--s-8);
-  border-radius: 0;
-  outline: none;
   cursor: pointer;
   background-color: transparent;
   background-position: center;
   background-repeat: no-repeat;
   border: none;
-  z-index: 100;
+  margin: 0 var(--s-4);
 }
 
 .prev {
@@ -37,43 +47,12 @@
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="%23000" d="M24.707 38.101L4.908 57.899c-4.686 4.686-4.686 12.284 0 16.971L185.607 256 4.908 437.13c-4.686 4.686-4.686 12.284 0 16.971L24.707 473.9c4.686 4.686 12.284 4.686 16.971 0l209.414-209.414c4.686-4.686 4.686-12.284 0-16.971L41.678 38.101c-4.687-4.687-12.285-4.687-16.971 0z"></path></svg>');
 }
 
-.skillsContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-}
-
-.skillsWrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-}
-
-.skillWrapper {
-  text-align: center;
-  font-size: var(--text-2xl);
-  font-family: var(--font-base);
-  margin-left: var(--s-6);
-  margin-right: var(--s-6);
-  flex: 1;
-}
-
-.videoStyles, .imageStyles {
-  display: block;
-  width: var(--s-175);
-  min-height: var(--s-127);
-  object-fit: cover;
-  margin-left: auto;
-  margin-right: auto;
-}
-
+.videoStyles,
 .imageStyles {
   display: block;
-  width: var(--s-175);
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+  width: var(--s-285);
+  max-height: var(--s-127);
+  object-fit: cover;
 }
 
 .descriptionStyles {
@@ -83,9 +62,7 @@
   font-weight: var(--font-normal);
   color: var(--gray-800);
   margin-bottom: var(--s-3);
-  margin-top: var(--s-2);
+  margin-top: var(--s-4);
   text-align: left;
   width: var(--s-175);
-  margin-left: auto;
-  margin-right: auto;
 }
