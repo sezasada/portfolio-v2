@@ -1,9 +1,15 @@
+.containerStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapperStyles {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  max-width: var(--s-320);
   padding: var(--s-10);
   gap: var(--s-6);
 }

@@ -3,6 +3,7 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Skills from "../../components/Skills/Skills";
+import Contributions from "../../components/Contributions/Contributions";
 import css from "./homepage.module.css";
 
 const Homepage = () => {
@@ -19,6 +20,9 @@ const Homepage = () => {
       </div>
       <div>
         <AboutMe />
+      </div>
+      <div>
+        <Contributions />
       </div>
     </div>
   );
