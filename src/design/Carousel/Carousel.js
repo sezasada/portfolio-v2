@@ -78,7 +78,7 @@ const Carousel = ({ items, skillsToShow = 1 }) => {
             <div className={css.skillsContainer}>
               <div className={css.skillsWrapper}>
                 {displayedItems.map(({ id, video, image }, index) => (
-                  <div key={index} className={css.skillWrapper}>
+                  <div key={index} className={`${css.skillWrapper} active`}>
                     {video && (
                       <div>
                         <video
@@ -93,7 +93,7 @@ const Carousel = ({ items, skillsToShow = 1 }) => {
                         <img className={css.imageStyles} src={image} alt={id} />
                       </div>
                     )}
-                    <div className={css.descriptionStyles}>
+                    <div className={`${css.descriptionStyles} active`}>
                       <FormattedMessage id={id} />
                     </div>
                   </div>

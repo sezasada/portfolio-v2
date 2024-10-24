@@ -59,15 +59,11 @@
   flex: 1;
 }
 
-.iconStyles {
-  width: var(--s-14);
-  height: var(--s-14);
-  margin-bottom: var(--s-4);
-}
-
-.videoStyles {
+.videoStyles, .imageStyles {
   display: block;
   width: var(--s-175);
+  min-height: var(--s-127);
+  object-fit: cover;
   margin-left: auto;
   margin-right: auto;
 }

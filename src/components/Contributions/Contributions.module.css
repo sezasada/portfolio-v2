@@ -1,11 +1,5 @@
 @import "../../index.css";
 
-.divider {
-  background-color: var(--gray-500);
-  height: 1px;
-  border: none;
-}
-
 .containerStyles {
   display: flex;
   justify-content: center;
@@ -16,7 +10,12 @@
   display: block;
   width: var(--s-320);
   margin-left: var(--s-44);
-  margin-bottom: var(--s-44);
+}
+
+.divider {
+  background-color: var(--gray-500);
+  height: 1px;
+  border: none;
 }
 
 .titleStyles {
