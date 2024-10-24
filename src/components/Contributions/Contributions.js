@@ -19,8 +19,8 @@ const Contributions = () => {
 
   const skillsTwo = [
     { id: "Contributions.marketWatcher", video: marketWatcherVideo },
-    { id: "Contributions.farmworks", image: farmworksImage },
-    { id: "Contributions.listingPage", image: cryptoImage },
+    { id: "Contributions.farmWorks", image: farmworksImage },
+    { id: "Contributions.cryptoExchange", image: cryptoImage },
   ];
 
   return (
