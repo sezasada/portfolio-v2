@@ -42,7 +42,82 @@
 .columnTwo {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: flex-start;
   height: var(--s-140);
+}
+
+.titleStyles {
+  font-size: var(--text-5xl);
+  font-family: var(--font-base);
+  font-weight: var(--font-bolder);
+  margin-top: var(--s-5);
+  color: var(--gray-900);
+  width: var(--s-100);
+}
+
+.subtitleStyles {
+  font-size: var(--text-lg);
+  font-family: var(--font-base);
+  font-weight: var(--font-light);
+  margin-top: var(--s-5);
+  margin-bottom: var(--s-5);
+  color: var(--grey-900);
+  width: var(--s-100);
+}
+
+.bodyOneStyles {
+  font-size: var(--text-base);
+  font-family: var(--font-base);
+  color: var(--gray-700);
+  width: var(--s-140);
+  margin-bottom: var(--s-5);
+}
+
+.sectionStyles {
+  font-size: var(--text-base);
+  font-family: var(--font-base);
+  display: flex;
+  gap: var(--s-5);
+  margin-bottom: var(--s-4);
+}
+
+.iconStyles {
+  width: var(--s-4);
+  height: var(--s-4);
+  margin-right: var(--s-2);
+}
+
+.sectionHeaderStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--font-bold);
+  color: var(--gray-900);
+}
+
+.sectionBodyStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--gray-900);
+  font-weight: var(--font-extra-light);
+}
+
+.buttonStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--s-32);
+  height: var(--s-14);
+  background-color: var(--green-400);
+  color: var(--gray-900);
+  font-size: var(--text-base);
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
 }
