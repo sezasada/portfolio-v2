@@ -24,7 +24,7 @@
 
 .titleStyles {
   display: flex;
-  font-size: var(--text-5xl);
+  font-size: var(--text-6xl);
   font-family: var(--font-base);
   font-weight: var(--font-bolder);
   color: var(--gray-900);

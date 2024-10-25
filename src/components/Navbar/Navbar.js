@@ -6,7 +6,12 @@ import { ReactComponent as LinkedinSquare } from "@public/icons/linkedin.svg";
 import { ReactComponent as Github } from "@public/icons/github.svg";
 import { ReactComponent as Dev } from "@public/icons/dev.svg";
 
-const Navbar = () => {
+const Navbar = ({
+  scrollToAboutMe,
+  scrollToContributions,
+  scrollToTestimonials,
+  scrollTocontactMe,
+}) => {
   return (
     <div className={css.navbarContainer}>
       <div className={css.topSection}>
@@ -49,16 +54,16 @@ const Navbar = () => {
       <hr className={css.divider} />
       <div className={css.bottomSection}>
         <div className={css.navbarStyles}>
-          <div className={css.navItemStyles}>
+          <div className={css.navItemStyles} onClick={scrollToAboutMe}>
             <FormattedMessage id="Navbar.aboutMe" />
           </div>
-          <div className={css.navItemStyles}>
+          <div className={css.navItemStyles} onClick={scrollToContributions}>
             <FormattedMessage id="Navbar.projects" />
           </div>
-          <div className={css.navItemStyles}>
+          <div className={css.navItemStyles} onClick={scrollToTestimonials}>
             <FormattedMessage id="Navbar.testimonials" />
           </div>
-          <div className={css.navItemStyles}>
+          <div className={css.navItemStyles} onClick={scrollTocontactMe}>
             <FormattedMessage id="Navbar.contactMe" />
           </div>
         </div>
