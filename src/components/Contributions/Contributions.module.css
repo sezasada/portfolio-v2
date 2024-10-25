@@ -11,13 +11,24 @@
 }
 
 .wrapperStyles {
+  width: 62%;
+}
+
+.carouselContainer {
+  background-color: var(--gray-400);
+  padding: 60px 0px 40px 0;
+  margin-left: -60px;
+  margin-bottom: var(--s-10);
+}
+
+.carouselStyles {
   display: block;
   width: 100%;
 }
 
 .bodyStyles {
   display: block;
-  margin-left: var(--s-73);
+  width: 88%;
 }
 
 .divider {

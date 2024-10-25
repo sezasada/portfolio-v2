@@ -37,12 +37,22 @@ const Contributions = () => {
           <div className={css.serviceStyles}>
             <FormattedMessage id="Contributions.landtrustCopy" />
           </div>
-          <Carousel items={landtrustContributions} />
-          <hr className={css.dividerTwo} />
+        </div>
+        <div className={css.carouselContainer}>
+          <div className={css.carouselStyles}>
+            <Carousel items={landtrustContributions} />
+          </div>
+        </div>
+        <div className={css.bodyStyles}>
+          <hr className={css.divider} />
           <div className={css.serviceStyles}>
             <FormattedMessage id="Contributions.personalCopy" />
           </div>
-          <Carousel items={skillsTwo} />
+        </div>
+        <div className={css.carouselContainer}>
+          <div className={css.carouselStyles}>
+            <Carousel items={skillsTwo} />
+          </div>
         </div>
       </div>
     </div>
