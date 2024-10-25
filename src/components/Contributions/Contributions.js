@@ -44,7 +44,6 @@ const Contributions = () => {
           </div>
         </div>
         <div className={css.bodyStyles}>
-          <hr className={css.divider} />
           <div className={css.serviceStyles}>
             <FormattedMessage id="Contributions.personalCopy" />
           </div>

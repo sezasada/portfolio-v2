@@ -1,3 +1,5 @@
+@import "../../index.css";
+
 .containerStyles {
   display: flex;
   justify-content: center;
@@ -44,11 +46,21 @@
   border: none;
 }
 
+.testimonialContainer {
+  display: block;
+  margin-top: var(--s-10);
+
+  @media (min-width: 1280px) {
+    display: flex;
+    gap: 70px;
+  }
+}
+
 .testimonialWrapper {
   background-color: white;
   padding: var(--s-10);
-  margin-top: var(--s-15);
   width: var(--s-100);
+  margin-bottom: var(--s-10)
 }
 
 .testimonialBox {

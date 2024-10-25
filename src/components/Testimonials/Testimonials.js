@@ -1,6 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import codyImage from "@public/images/testimonials/cody.jpg";
+import joshImage from "@public/images/testimonials/josh.jpg";
 
 import css from "./Testimonials.module.css";
 
@@ -16,24 +17,46 @@ const Testimonials = () => {
             <FormattedMessage id="Testimonials.subtitle" />
           </div>
           <hr className={css.divider} />
-          <div className={css.testimonialWrapper}>
-            <div className={css.testimonialBox}>
-              <img
-                src={codyImage}
-                alt="employee"
-                className={css.sectionImage}
-              />
-              <div className={css.testimonialBio}>
-                <div className={css.testimonialName}>
-                  <FormattedMessage id="Testimonials.cody" />
-                </div>
-                <div className={css.testimonialJonTitle}>
-                  <FormattedMessage id="Testimonials.codyJobTitle" />
+          <div className={css.testimonialContainer}>
+            <div className={css.testimonialWrapper}>
+              <div className={css.testimonialBox}>
+                <img
+                  src={codyImage}
+                  alt="employee"
+                  className={css.sectionImage}
+                />
+                <div className={css.testimonialBio}>
+                  <div className={css.testimonialName}>
+                    <FormattedMessage id="Testimonials.cody" />
+                  </div>
+                  <div className={css.testimonialJonTitle}>
+                    <FormattedMessage id="Testimonials.codyJobTitle" />
+                  </div>
                 </div>
               </div>
+              <div className={css.testimonialReferral}>
+                <FormattedMessage id="Testimonials.codyReferral" />
+              </div>
             </div>
-            <div className={css.testimonialReferral}>
-              <FormattedMessage id="Testimonials.codyReferral" />
+            <div className={css.testimonialWrapper}>
+              <div className={css.testimonialBox}>
+                <img
+                  src={joshImage}
+                  alt="employee"
+                  className={css.sectionImage}
+                />
+                <div className={css.testimonialBio}>
+                  <div className={css.testimonialName}>
+                    <FormattedMessage id="Testimonials.josh" />
+                  </div>
+                  <div className={css.testimonialJonTitle}>
+                    <FormattedMessage id="Testimonials.joshJobTitle" />
+                  </div>
+                </div>
+              </div>
+              <div className={css.testimonialReferral}>
+                <FormattedMessage id="Testimonials.joshReferral" />
+              </div>
             </div>
           </div>
         </div>

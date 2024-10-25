@@ -64,10 +64,10 @@
 
 .serviceStyles {
   display: flex;
-  font-size: var(--text-base);
+  font-size: var(--text-xl);
   font-family: var(--font-base);
-  font-weight: var(--font-normal);
-  color: var(--gray-700);
+  font-weight: var(--font-bold);
+  color: var(--gray-800);
   margin-bottom: var(--s-3);
   margin-top: var(--s-7);
 }
