@@ -99,6 +99,7 @@
   font-size: var(--text-sm);
   color: var(--gray-700);
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .navbarStyles {

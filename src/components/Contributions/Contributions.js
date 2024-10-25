@@ -26,21 +26,33 @@ const Contributions = () => {
   return (
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>
-        <div className={css.titleStyles}>
-          <FormattedMessage id="Contributions.title" />
+        <div className={css.bodyStyles}>
+          <div className={css.titleStyles}>
+            <FormattedMessage id="Contributions.title" />
+          </div>
+          <div className={css.subtitleStyles}>
+            <FormattedMessage id="Contributions.subtitle" />
+          </div>
+          <hr className={css.divider} />
+          <div className={css.serviceStyles}>
+            <FormattedMessage id="Contributions.landtrustCopy" />
+          </div>
         </div>
-        <div className={css.subtitleStyles}>
-          <FormattedMessage id="Contributions.subtitle" />
+        <div className={css.carouselContainer}>
+          <div className={css.carouselStyles}>
+            <Carousel items={landtrustContributions} />
+          </div>
         </div>
-        <hr className={css.divider} />
-        <div className={css.serviceStyles}>
-          <FormattedMessage id="Contributions.landtrustCopy" />
+        <div className={css.bodyStyles}>
+          <div className={css.serviceStyles}>
+            <FormattedMessage id="Contributions.personalCopy" />
+          </div>
         </div>
-        <Carousel items={landtrustContributions} />
-        <div className={css.serviceStyles}>
-          <FormattedMessage id="Contributions.personalCopy" />
+        <div className={css.carouselContainer}>
+          <div className={css.carouselStyles}>
+            <Carousel items={skillsTwo} />
+          </div>
         </div>
-        <Carousel items={skillsTwo} />
       </div>
     </div>
   );

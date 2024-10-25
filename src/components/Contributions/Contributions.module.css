@@ -4,23 +4,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--green-400);
+  margin-bottom: var(--s-10);
+  padding-top: var(--s-24);
+  padding-bottom: var(--s-24);
 }
 
 .wrapperStyles {
+  width: 62%;
+}
+
+.carouselContainer {
+  background-color: var(--gray-400);
+  padding: 60px 0px 40px 0;
+  margin-left: -60px;
+  margin-bottom: var(--s-10);
+}
+
+.carouselStyles {
   display: block;
-  width: var(--s-320);
-  margin-left: var(--s-44);
+  width: 100%;
+}
+
+.bodyStyles {
+  display: block;
+  width: 88%;
 }
 
 .divider {
+  background-color: var(--gray-900);
+  height: 1px;
+  border: none;
+}
+
+.dividerTwo {
   background-color: var(--gray-500);
   height: 1px;
+  margin-top: var(--s-10);
   border: none;
 }
 
 .titleStyles {
   display: flex;
-  font-size: var(--text-4xl);
+  font-size: var(--text-6xl);
   font-family: var(--font-base);
   font-weight: var(--font-bolder);
   color: var(--gray-900);
@@ -38,10 +64,10 @@
 
 .serviceStyles {
   display: flex;
-  font-size: var(--text-base);
+  font-size: var(--text-xl);
   font-family: var(--font-base);
-  font-weight: var(--font-normal);
-  color: var(--gray-700);
+  font-weight: var(--font-bold);
+  color: var(--gray-800);
   margin-bottom: var(--s-3);
-  margin-top: var(--s-10);
+  margin-top: var(--s-7);
 }

@@ -66,49 +66,33 @@ const Carousel = ({ items, skillsToShow = 1 }) => {
 
   return (
     <div className={css.carouselWrapper}>
-      <div className={css.controlsContainer}>
-        {items.length > 1 && (
-          <>
-            <button
-              className={css.prev}
-              onClick={(e) => prev(e)}
-              type="button"
-              aria-label="Previous item"
-            />
-            <div className={css.skillsContainer}>
-              <div className={css.skillsWrapper}>
-                {displayedItems.map(({ id, video, image }, index) => (
-                  <div key={index} className={`${css.skillWrapper} active`}>
-                    {video && (
-                      <div>
-                        <video
-                          className={css.videoStyles}
-                          src={video}
-                          controls
-                        />
-                      </div>
-                    )}
-                    {image && (
-                      <div>
-                        <img className={css.imageStyles} src={image} alt={id} />
-                      </div>
-                    )}
-                    <div className={`${css.descriptionStyles} active`}>
-                      <FormattedMessage id={id} />
-                    </div>
-                  </div>
-                ))}
-              </div>
+      <button
+        className={css.prev}
+        onClick={prev}
+        type="button"
+        aria-label="Previous item"
+      />
+
+      <div className={css.skillsContainer}>
+        {displayedItems.map(({ id, video, image }, index) => (
+          <div key={index} className={css.skillWrapper}>
+            {video && (
+              <video className={css.videoStyles} src={video} controls />
+            )}
+            {image && <img className={css.imageStyles} src={image} alt={id} />}
+            <div className={css.descriptionStyles}>
+              <FormattedMessage id={id} />
             </div>
-            <button
-              className={css.next}
-              onClick={(e) => next(e)}
-              type="button"
-              aria-label="Next item"
-            />
-          </>
-        )}
+          </div>
+        ))}
       </div>
+
+      <button
+        className={css.next}
+        onClick={next}
+        type="button"
+        aria-label="Next item"
+      />
     </div>
   );
 };
