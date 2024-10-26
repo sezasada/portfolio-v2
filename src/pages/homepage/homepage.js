@@ -1,5 +1,6 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import AboutMe from "../../components/AboutMe/AboutMe";
+import { useLocation } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
 import Skills from "../../components/Skills/Skills";
@@ -15,6 +16,7 @@ const Homepage = () => {
   const contributionsRef = useRef(null);
   const testimonialsRef = useRef(null);
   const contactMeRef = useRef(null);
+  const location = useLocation();
 
   const scrollToAboutMe = () => {
     if (aboutMeRef.current) {
@@ -48,6 +50,14 @@ const Homepage = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (location.hash === "#references") {
+      setTimeout(() => {
+        scrollToTestimonials();
+      }, 500);
+    }
+  }, [location.hash]);
 
   return (
     <div className={css.pageWrapper}>
