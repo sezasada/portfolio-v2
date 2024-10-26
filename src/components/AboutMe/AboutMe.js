@@ -6,7 +6,7 @@ import { ReactComponent as Info } from "@public/icons/info.svg";
 
 import css from "./AboutMe.module.css";
 
-const AboutMe = () => {
+const AboutMe = ({ scrollToContributions }) => {
   return (
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>
@@ -56,7 +56,7 @@ const AboutMe = () => {
           <div className={css.bodyOneStyles}>
             <FormattedMessage id="AboutMe.bodyCopyTwo" />
           </div>
-          <div className={css.buttonStyles}>
+          <div className={css.buttonStyles} onClick={scrollToContributions}>
             <FormattedMessage id="AboutMe.portfolioButton" />
           </div>
         </div>

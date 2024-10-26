@@ -1,9 +1,10 @@
 import React, { useState, useCallback, useEffect } from "react";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 import css from "./Carousel.module.css";
 
 const Carousel = ({ items, skillsToShow = 1 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intl = useIntl();
 
   const displayedItems = items.slice(currentIndex, currentIndex + skillsToShow);
 
@@ -64,6 +65,11 @@ const Carousel = ({ items, skillsToShow = 1 }) => {
     };
   }, [onKeyUp]);
 
+  const handleRedirect = (linkId) => {
+    const link = intl.formatMessage({ id: linkId });
+    window.open(link, "_blank");
+  };
+
   return (
     <div className={css.carouselWrapper}>
       <button
@@ -74,7 +80,7 @@ const Carousel = ({ items, skillsToShow = 1 }) => {
       />
 
       <div className={css.skillsContainer}>
-        {displayedItems.map(({ id, video, image }, index) => (
+        {displayedItems.map(({ id, video, image, link }, index) => (
           <div key={index} className={css.skillWrapper}>
             {video && (
               <video className={css.videoStyles} src={video} controls />
@@ -83,6 +89,14 @@ const Carousel = ({ items, skillsToShow = 1 }) => {
             <div className={css.descriptionStyles}>
               <FormattedMessage id={id} />
             </div>
+            {link && (
+              <div
+                className={css.linkStyles}
+                onClick={() => handleRedirect(link)}
+              >
+                <FormattedMessage id={link} />
+              </div>
+            )}
           </div>
         ))}
       </div>

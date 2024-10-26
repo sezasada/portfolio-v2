@@ -6,6 +6,7 @@ import Skills from "../../components/Skills/Skills";
 import Contributions from "../../components/Contributions/Contributions";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import ContactMe from "../../components/ContactMe/ContactMe";
+import Footer from "../../components/Footer/Footer";
 import css from "./homepage.module.css";
 
 const Homepage = () => {
@@ -61,7 +62,7 @@ const Homepage = () => {
         <Header />
       </div>
       <div ref={aboutMeRef}>
-        <AboutMe />
+        <AboutMe scrollToContributions={scrollToContributions} />
       </div>
       <div>
         <Skills />
@@ -74,6 +75,14 @@ const Homepage = () => {
       </div>
       <div ref={contactMeRef}>
         <ContactMe />
+      </div>
+      <div>
+        <Footer
+          scrollToAboutMe={scrollToAboutMe}
+          scrollToContributions={scrollToContributions}
+          scrollToTestimonials={scrollToTestimonials}
+          scrollTocontactMe={scrollTocontactMe}
+        />
       </div>
     </div>
   );

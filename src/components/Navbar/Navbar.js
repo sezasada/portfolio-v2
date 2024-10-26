@@ -12,6 +12,26 @@ const Navbar = ({
   scrollToTestimonials,
   scrollTocontactMe,
 }) => {
+  const handleLinkedinClick = () => {
+    window.open("https://www.linkedin.com/in/sebastien-zasada/", "_blank");
+  };
+
+  const handleGithubClick = () => {
+    window.open("https://github.com/sezasada", "_blank");
+  };
+
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/sebzasada/", "_blank");
+  };
+
+  const handleContactClick = () => {
+    window.location.href = "mailto:sezasada@icloud.com";
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+12187900487";
+  };
+
   return (
     <div className={css.navbarContainer}>
       <div className={css.topSection}>
@@ -37,7 +57,10 @@ const Navbar = ({
             <div className={css.contactTitleStyles}>
               <FormattedMessage id="Navbar.contactCta" />
             </div>
-            <div className={css.contactValueStyles}>
+            <div
+              className={css.contactValueStyles}
+              onClick={handleContactClick}
+            >
               <FormattedMessage id="Navbar.emailCta" />
             </div>
           </div>
@@ -46,7 +69,10 @@ const Navbar = ({
               <FormattedMessage id="Navbar.phoneCta" />
             </div>
             <div className={css.contactValueStyles}>
-              <FormattedMessage id="Navbar.phoneNumberCta" />
+              <FormattedMessage
+                id="Navbar.phoneNumberCta"
+                onClick={handlePhoneClick}
+              />
             </div>
           </div>
         </div>
@@ -68,13 +94,13 @@ const Navbar = ({
           </div>
         </div>
         <div className={css.iconSection}>
-          <div className={css.iconStyles}>
+          <div className={css.iconStyles} onClick={handleInstagramClick}>
             <InstagramSquare />
           </div>
-          <div className={css.iconStyles}>
+          <div className={css.iconStyles} onClick={handleLinkedinClick}>
             <LinkedinSquare />
           </div>
-          <div className={css.iconStyles}>
+          <div className={css.iconStyles} onClick={handleGithubClick}>
             <Github />
           </div>
         </div>

@@ -12,9 +12,21 @@ import css from "./Contributions.module.css";
 
 const Contributions = () => {
   const landtrustContributions = [
-    { id: "Contributions.fieldnotes", video: fieldnotesVideo },
-    { id: "Contributions.homepage", video: homepageVideo },
-    { id: "Contributions.listingPage", video: listingVideo },
+    {
+      id: "Contributions.fieldnotes",
+      video: fieldnotesVideo,
+      link: "Contributions.fieldnotesLink",
+    },
+    {
+      id: "Contributions.homepage",
+      video: homepageVideo,
+      link: "Contributions.homepageLink",
+    },
+    {
+      id: "Contributions.listingPage",
+      video: listingVideo,
+      link: "Contributions.listingPageLink",
+    },
   ];
 
   const skillsTwo = [
