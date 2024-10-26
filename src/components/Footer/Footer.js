@@ -5,6 +5,7 @@ import { ReactComponent as InstagramSquare } from "@public/icons/instagram.svg";
 import { ReactComponent as LinkedinSquare } from "@public/icons/linkedin.svg";
 import { ReactComponent as Github } from "@public/icons/github.svg";
 import { ReactComponent as Dev } from "@public/icons/dev.svg";
+import { ReactComponent as CopyRight } from "@public/icons/copy-right.svg";
 
 const Footer = ({
   scrollToAboutMe,
@@ -91,6 +92,9 @@ const Footer = ({
         <hr className={css.divider} />
         <div className={css.bottomSection}>
           <div className={css.copyStyles}>
+            <div className={css.copyIconStyles}>
+              <CopyRight />
+            </div>
             <FormattedMessage id="Footer.createdBy" />
           </div>
           <div className={css.iconSection}>
