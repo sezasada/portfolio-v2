@@ -60,7 +60,7 @@
   background-color: white;
   padding: var(--s-10);
   width: var(--s-100);
-  margin-bottom: var(--s-10)
+  margin-bottom: var(--s-10);
 }
 
 .testimonialBox {
@@ -103,4 +103,12 @@
   font-family: var(--font-base);
   color: var(--gray-600);
   font-style: italic;
+}
+
+.quoteIconStyles {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: var(--s-4);
+  margin-left: auto;
+  align-items: center;
 }

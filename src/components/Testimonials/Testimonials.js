@@ -2,6 +2,7 @@ import React from "react";
 import { FormattedMessage } from "react-intl";
 import codyImage from "../../assets/images/testimonials/cody.jpg";
 import joshImage from "../../assets/images/testimonials/josh.jpg";
+import { ReactComponent as Quotes } from "../../assets/icons/quotes.svg";
 
 import css from "./Testimonials.module.css";
 
@@ -33,6 +34,9 @@ const Testimonials = () => {
                     <FormattedMessage id="Testimonials.codyJobTitle" />
                   </div>
                 </div>
+                <div className={css.quoteIconStyles}>
+                  <Quotes />
+                </div>
               </div>
               <div className={css.testimonialReferral}>
                 <FormattedMessage id="Testimonials.codyReferral" />
@@ -52,6 +56,9 @@ const Testimonials = () => {
                   <div className={css.testimonialJonTitle}>
                     <FormattedMessage id="Testimonials.joshJobTitle" />
                   </div>
+                </div>
+                <div className={css.quoteIconStyles}>
+                  <Quotes />
                 </div>
               </div>
               <div className={css.testimonialReferral}>
