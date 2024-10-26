@@ -64,3 +64,17 @@
   text-align: left;
   width: 100%;
 }
+
+.linkStyles {
+  display: block;
+  font-size: var(--text-base);
+  font-family: var(--font-base);
+  font-weight: var(--font-bold);
+  cursor: pointer;
+  text-decoration: underline;
+  color: var(--gray-800);
+  margin-bottom: var(--s-3);
+  margin-top: var(--s-4);
+  text-align: left;
+  width: 100%;
+}

@@ -1,7 +1,14 @@
 @import "../../index.css";
 
-.navbarContainer {
-  width: 70%;
+.containerStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapperStyles {
+  display: block;
+  width: 65%;
 }
 
 .topSection {
@@ -64,17 +71,22 @@
   font-weight: var(--font-light);
 }
 
-.emailWrapper,
-.numberWrapper {
+.testimonialsContainer,
+.testimonialWrapper {
   text-align: left;
 }
 
-.contactTitleStyles {
+.testimonialStyles {
   font-family: var(--font-base);
   font-size: var(--text-sm);
+  cursor: pointer;
   color: var(--gray-600);
-  font-weight: var(--font-extra-light);
+  font-weight: var(--font-light);
   margin-bottom: var(--s-2);
+
+  &:hover {
+    color: var(--gray-900);
+  }
 }
 
 .contactValueStyles {
@@ -83,11 +95,6 @@
   color: var(--gray-800);
   font-weight: normal;
   margin-bottom: var(--s-2);
-  cursor: pointer;
-  
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 .bottomSection {
@@ -105,14 +112,13 @@
   color: var(--gray-700);
   white-space: nowrap;
   cursor: pointer;
-  font-weight: var(--font-light);
-
-  &:hover {
-    color: var(--gray-900);
-  }
 }
 
-.navbarStyles {
+.copyStyles {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  font-weight: var(--font-bold);
   display: flex;
   align-items: center;
   gap: var(--s-10);
