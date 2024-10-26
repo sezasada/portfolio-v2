@@ -5,6 +5,9 @@ import profileImage from "@public/images/header-images/profile-image.png";
 import css from "./Header.module.css";
 
 const Header = () => {
+  const handleContactClick = () => {
+    window.location.href = "mailto:sezasada@icloud.com";
+  };
   return (
     <div className={css.wrapperStyles}>
       <div className={css.contentStyles}>
@@ -15,7 +18,11 @@ const Header = () => {
           <FormattedMessage id="Header.subTitle" />
         </div>
         <div>
-          <SecondaryButton className={css.contactButton} type="button">
+          <SecondaryButton
+            className={css.contactButton}
+            type="button"
+            onClick={handleContactClick}
+          >
             <div>
               <FormattedMessage id="Header.contactButton" />
             </div>
