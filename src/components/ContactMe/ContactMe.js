@@ -7,6 +7,18 @@ import { ReactComponent as Linkedin } from "@public/icons/linkedin-v2.svg";
 import css from "./ContactMe.module.css";
 
 const ContactMe = () => {
+  const handleContactClick = () => {
+    window.location.href = "mailto:sezasada@icloud.com";
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = "tel:+12187900487";
+  };
+
+  const handleLinkedinClick = () => {
+    window.open("https://www.linkedin.com/in/sebastien-zasada/", "_blank");
+  };
+
   return (
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>
@@ -25,7 +37,7 @@ const ContactMe = () => {
             <div className={css.subheadingStyles}>
               <FormattedMessage id="ContactMe.writeMe" />
             </div>
-            <div className={css.contactStyles}>
+            <div className={css.contactStyles} onClick={handleContactClick}>
               <FormattedMessage id="ContactMe.emailAddress" />
             </div>
           </div>
@@ -34,7 +46,7 @@ const ContactMe = () => {
             <div className={css.subheadingStyles}>
               <FormattedMessage id="ContactMe.callMe" />
             </div>
-            <div className={css.contactStyles}>
+            <div className={css.contactStyles} onClick={handlePhoneClick}>
               <FormattedMessage id="ContactMe.phoneNumber" />
             </div>
           </div>
@@ -43,7 +55,7 @@ const ContactMe = () => {
             <div className={css.subheadingStyles}>
               <FormattedMessage id="ContactMe.findMe" />
             </div>
-            <div className={css.contactStyles}>
+            <div className={css.contactStyles} onClick={handleLinkedinClick}>
               <FormattedMessage id="ContactMe.linkedinUsername" />
             </div>
           </div>
