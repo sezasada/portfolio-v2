@@ -4,11 +4,25 @@ Welcome to the portfolio of Sebastien Zasada, a software engineer specializing i
 
 ## Features
 
-About Me: A brief introduction to Sebastien's background and expertise.
-Skills: Core competencies, including JavaScript, TypeScript, GraphQL, and AWS.
-Contributions: A showcase of key projects, both professional and personal.
-Testimonials: Words from colleagues that highlight Sebastien's work ethic and skill set.
-Contact Section: Quick links to reach out via email, LinkedIn, or phone.
+### `About Me:` 
+
+A brief introduction to Sebastien's background and expertise.
+
+### `Skills:` 
+
+Core competencies, including JavaScript, TypeScript, GraphQL, and AWS.
+
+### `Contributions:` 
+
+A showcase of key projects, both professional and personal.
+
+### `Testimonials:` 
+
+Words from colleagues that highlight Sebastien's work ethic and skill set.
+
+### `Contact Section:` 
+
+Quick links to reach out via email, LinkedIn, or phone.
 
 ## Available Scripts
 
