@@ -8,6 +8,7 @@ import Testimonials from "../../components/Testimonials/Testimonials";
 import ContactMe from "../../components/ContactMe/ContactMe";
 import Footer from "../../components/Footer/Footer";
 import css from "./homepage.module.css";
+import { FormattedMessage } from "react-intl";
 
 const Homepage = () => {
   const aboutMeRef = useRef(null);
@@ -50,39 +51,44 @@ const Homepage = () => {
 
   return (
     <div className={css.pageWrapper}>
-      <div className={css.navbarWrapper}>
-        <Navbar
-          scrollToAboutMe={scrollToAboutMe}
-          scrollToContributions={scrollToContributions}
-          scrollToTestimonials={scrollToTestimonials}
-          scrollTocontactMe={scrollTocontactMe}
-        />
+      <div className={css.mobileMessage}>
+        <FormattedMessage id="Homepage.mobileMessage" />
       </div>
-      <div>
-        <Header />
-      </div>
-      <div ref={aboutMeRef}>
-        <AboutMe scrollToContributions={scrollToContributions} />
-      </div>
-      <div>
-        <Skills />
-      </div>
-      <div ref={contributionsRef}>
-        <Contributions />
-      </div>
-      <div ref={testimonialsRef}>
-        <Testimonials />
-      </div>
-      <div ref={contactMeRef}>
-        <ContactMe />
-      </div>
-      <div>
-        <Footer
-          scrollToAboutMe={scrollToAboutMe}
-          scrollToContributions={scrollToContributions}
-          scrollToTestimonials={scrollToTestimonials}
-          scrollTocontactMe={scrollTocontactMe}
-        />
+      <div className={css.homepageContainer}>
+        <div className={css.navbarWrapper}>
+          <Navbar
+            scrollToAboutMe={scrollToAboutMe}
+            scrollToContributions={scrollToContributions}
+            scrollToTestimonials={scrollToTestimonials}
+            scrollTocontactMe={scrollTocontactMe}
+          />
+        </div>
+        <div>
+          <Header />
+        </div>
+        <div ref={aboutMeRef}>
+          <AboutMe scrollToContributions={scrollToContributions} />
+        </div>
+        <div>
+          <Skills />
+        </div>
+        <div ref={contributionsRef}>
+          <Contributions />
+        </div>
+        <div ref={testimonialsRef}>
+          <Testimonials />
+        </div>
+        <div ref={contactMeRef}>
+          <ContactMe />
+        </div>
+        <div>
+          <Footer
+            scrollToAboutMe={scrollToAboutMe}
+            scrollToContributions={scrollToContributions}
+            scrollToTestimonials={scrollToTestimonials}
+            scrollTocontactMe={scrollTocontactMe}
+          />
+        </div>
       </div>
     </div>
   );
