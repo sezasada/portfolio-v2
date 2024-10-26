@@ -1,8 +1,8 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import { ReactComponent as Mail } from "@public/icons/mail.svg";
-import { ReactComponent as Phone } from "@public/icons/phone.svg";
-import { ReactComponent as Linkedin } from "@public/icons/linkedin-v2.svg";
+import { ReactComponent as Mail } from "../../assets/icons/mail.svg";
+import { ReactComponent as Phone } from "../../assets/icons/phone.svg";
+import { ReactComponent as Linkedin } from "../../assets/icons/linkedin-v2.svg";
 
 import css from "./ContactMe.module.css";
 

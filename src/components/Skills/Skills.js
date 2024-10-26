@@ -1,14 +1,14 @@
 import React, { useState, useCallback, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
-import { ReactComponent as HtmlIcon } from "@public/icons/html.svg";
-import { ReactComponent as GraphqlIcon } from "@public/icons/graphql.svg";
-import { ReactComponent as CssIcon } from "@public/icons/css.svg";
-import { ReactComponent as JavascriptIcon } from "@public/icons/javascript.svg";
-import { ReactComponent as TypescriptIcon } from "@public/icons/typescript.svg";
-import { ReactComponent as AwsIcon } from "@public/icons/aws.svg";
-import { ReactComponent as ReduxIcon } from "@public/icons/redux.svg";
-import { ReactComponent as ReactIcon } from "@public/icons/react.svg";
-import { ReactComponent as NextIcon } from "@public/icons/next.svg";
+import { ReactComponent as HtmlIcon } from "../../assets/icons/html.svg";
+import { ReactComponent as GraphqlIcon } from "../../assets/icons/graphql.svg";
+import { ReactComponent as CssIcon } from "../../assets/icons/css.svg";
+import { ReactComponent as JavascriptIcon } from "../../assets/icons/javascript.svg";
+import { ReactComponent as TypescriptIcon } from "../../assets/icons/typescript.svg";
+import { ReactComponent as AwsIcon } from "../../assets/icons/aws.svg";
+import { ReactComponent as ReduxIcon } from "../../assets/icons/redux.svg";
+import { ReactComponent as ReactIcon } from "../../assets/icons/react.svg";
+import { ReactComponent as NextIcon } from "../../assets/icons/next.svg";
 
 import css from "./Skills.module.css";
 
