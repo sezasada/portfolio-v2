@@ -1,12 +1,12 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import fieldnotesVideo from "@public/videos/fieldnotes.mp4";
-import homepageVideo from "@public/videos/homepage.mp4";
-import listingVideo from "@public/videos/listingpage.mp4";
-import marketWatcherVideo from "@public/videos/marketWatchervideo.mp4";
+import fieldnotesVideo from "../../assets/videos/fieldnotes.mp4";
+import homepageVideo from "../../assets/videos/homepage.mp4";
+import listingVideo from "../../assets/videos/listingpage.mp4";
+import marketWatcherVideo from "../../assets/videos/marketWatchervideo.mp4";
 import Carousel from "../../design/Carousel/Carousel";
-import cryptoImage from "@public/images/contribution-images/crypto-exchange.png";
-import farmworksImage from "@public/images/contribution-images/farmworks.png";
+import cryptoImage from "../../assets/images/contribution-images/crypto-exchange.png";
+import farmworksImage from "../../assets/images/contribution-images/farmworks.png";
 
 import css from "./Contributions.module.css";
 

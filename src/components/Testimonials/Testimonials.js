@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import codyImage from "@public/images/testimonials/cody.jpg";
-import joshImage from "@public/images/testimonials/josh.jpg";
+import codyImage from "../../assets/images/testimonials/cody.jpg";
+import joshImage from "../../assets/images/testimonials/josh.jpg";
 
 import css from "./Testimonials.module.css";
 

@@ -1,8 +1,8 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
-import codeImage from "@public/images/about-images/code.webp";
-import { ReactComponent as CheckMark } from "@public/icons/check.svg";
-import { ReactComponent as Info } from "@public/icons/info.svg";
+import codeImage from "../../assets/images/about-images/code.webp";
+import { ReactComponent as CheckMark } from "../../assets/icons/check.svg";
+import { ReactComponent as Info } from "../../assets/icons/info.svg";
 
 import css from "./AboutMe.module.css";
 

@@ -1,10 +1,10 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import css from "./Navbar.module.css";
-import { ReactComponent as InstagramSquare } from "@public/icons/instagram.svg";
-import { ReactComponent as LinkedinSquare } from "@public/icons/linkedin.svg";
-import { ReactComponent as Github } from "@public/icons/github.svg";
-import { ReactComponent as Dev } from "@public/icons/dev.svg";
+import { ReactComponent as InstagramSquare } from "../../assets/icons/instagram.svg";
+import { ReactComponent as LinkedinSquare } from "../../assets/icons/linkedin.svg";
+import { ReactComponent as Github } from "../../assets/icons/github.svg";
+import { ReactComponent as Dev } from "../../assets/icons/dev.svg";
 
 const Navbar = ({
   scrollToAboutMe,
