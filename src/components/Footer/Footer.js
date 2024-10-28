@@ -25,6 +25,10 @@ const Footer = ({
     window.open("https://www.instagram.com/sebzasada/", "_blank");
   };
 
+  const handleResumeClick = () => {
+    window.location.href = "/resume";
+  };
+
   return (
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>
@@ -76,6 +80,15 @@ const Footer = ({
                 <FormattedMessage id="Navbar.contactMe" />
               </div>
             </div>
+            <div className={css.testimonialWrapper}>
+              <div
+                className={css.testimonialStyles}
+                onClick={handleResumeClick}
+              >
+                <FormattedMessage id="Resume.title" />
+              </div>
+            </div>
+
             <div className={css.iconSection}>
               <div className={css.iconStyles} onClick={handleInstagramClick}>
                 <InstagramSquare />
