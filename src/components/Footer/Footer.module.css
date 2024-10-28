@@ -8,7 +8,7 @@
 
 .wrapperStyles {
   display: block;
-  width: 65%;
+  width: 70%;
 }
 
 .topSection {
@@ -83,6 +83,7 @@
   color: var(--gray-600);
   font-weight: var(--font-light);
   margin-bottom: var(--s-2);
+  white-space: nowrap;
 
   &:hover {
     color: var(--gray-900);
