@@ -1,0 +1,25 @@
+.pageWrapper {
+  margin-left: var(--s-7);
+  margin-right: var(--s-7);
+}
+
+.navbarWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.resumeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--gray-400);
+  padding-top: var(--s-20);
+  padding-bottom: var(--s-20);
+}
+
+.resumeIframe {
+  width: 70%;
+  height: 100%;
+}

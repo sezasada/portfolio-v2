@@ -32,6 +32,10 @@ const Navbar = ({
     window.location.href = "tel:+12187900487";
   };
 
+  const handleResumeClick = () => {
+    window.location.href = "/resume";
+  };
+
   return (
     <div className={css.navbarContainer}>
       <div className={css.topSection}>
@@ -91,6 +95,9 @@ const Navbar = ({
           </div>
           <div className={css.navItemStyles} onClick={scrollTocontactMe}>
             <FormattedMessage id="Navbar.contactMe" />
+          </div>
+          <div className={css.navItemStyles} onClick={handleResumeClick}>
+            <FormattedMessage id="Resume.title" />
           </div>
         </div>
         <div className={css.iconSection}>
