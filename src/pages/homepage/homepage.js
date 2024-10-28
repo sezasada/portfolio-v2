@@ -56,6 +56,18 @@ const Homepage = () => {
       setTimeout(() => {
         scrollToTestimonials();
       }, 500);
+    } else if (location.hash === "#contact") {
+      setTimeout(() => {
+        scrollTocontactMe();
+      }, 500);
+    } else if (location.hash === "#contributions") {
+      setTimeout(() => {
+        scrollToContributions();
+      }, 500);
+    } else if (location.hash === "#about") {
+      setTimeout(() => {
+        scrollToAboutMe();
+      }, 500);
     }
   }, [location.hash]);
 
