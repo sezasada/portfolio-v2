@@ -52,6 +52,8 @@
 
   @media (min-width: 1280px) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 70px;
   }
 }
@@ -68,6 +70,13 @@
   align-items: center;
   justify-content: flex-start;
   margin-bottom: var(--s-4);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.04);
+    text-decoration: underline;
+  }
 }
 
 .testimonialName {
