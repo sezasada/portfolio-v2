@@ -5,6 +5,7 @@ import joshImage from "../../assets/images/testimonials/josh.jpg";
 import nicImage from "../../assets/images/testimonials/nic.jpg";
 import robImage from "../../assets/images/testimonials/rob.webp";
 import { ReactComponent as Quotes } from "../../assets/icons/quotes.svg";
+import Marquee from "react-fast-marquee";
 
 import css from "./Testimonials.module.css";
 
@@ -36,100 +37,102 @@ const Testimonials = () => {
             <FormattedMessage id="Testimonials.subtitle" />
           </div>
           <hr className={css.divider} />
-          <div className={css.testimonialContainer}>
-            <div className={css.testimonialWrapper}>
-              <div className={css.testimonialBox} onClick={handleCodyClick}>
-                <img
-                  src={codyImage}
-                  alt="employee"
-                  className={css.sectionImage}
-                />
-                <div className={css.testimonialBio}>
-                  <div className={css.testimonialName}>
-                    <FormattedMessage id="Testimonials.cody" />
+          <Marquee autoFill pauseOnHover>
+            <div className={css.testimonialContainer}>
+              <div className={css.testimonialWrapper}>
+                <div className={css.testimonialBox} onClick={handleCodyClick}>
+                  <img
+                    src={codyImage}
+                    alt="employee"
+                    className={css.sectionImage}
+                  />
+                  <div className={css.testimonialBio}>
+                    <div className={css.testimonialName}>
+                      <FormattedMessage id="Testimonials.cody" />
+                    </div>
+                    <div className={css.testimonialJonTitle}>
+                      <FormattedMessage id="Testimonials.codyJobTitle" />
+                    </div>
                   </div>
-                  <div className={css.testimonialJonTitle}>
-                    <FormattedMessage id="Testimonials.codyJobTitle" />
+                  <div className={css.quoteIconStyles}>
+                    <Quotes />
                   </div>
                 </div>
-                <div className={css.quoteIconStyles}>
-                  <Quotes />
+                <div className={css.testimonialReferral}>
+                  <FormattedMessage id="Testimonials.codyReferral" />
                 </div>
               </div>
-              <div className={css.testimonialReferral}>
-                <FormattedMessage id="Testimonials.codyReferral" />
+              <div className={css.testimonialWrapper}>
+                <div className={css.testimonialBox} onClick={handleJoshClick}>
+                  <img
+                    src={joshImage}
+                    alt="employee"
+                    className={css.sectionImage}
+                  />
+                  <div className={css.testimonialBio}>
+                    <div className={css.testimonialName}>
+                      <FormattedMessage id="Testimonials.josh" />
+                    </div>
+                    <div className={css.testimonialJonTitle}>
+                      <FormattedMessage id="Testimonials.joshJobTitle" />
+                    </div>
+                  </div>
+                  <div className={css.quoteIconStyles}>
+                    <Quotes />
+                  </div>
+                </div>
+                <div className={css.testimonialReferral}>
+                  <FormattedMessage id="Testimonials.joshReferral" />
+                </div>
+              </div>
+              <div className={css.testimonialWrapper}>
+                <div className={css.testimonialBox} onClick={handleNicClick}>
+                  <img
+                    src={nicImage}
+                    alt="employee"
+                    className={css.sectionImage}
+                  />
+                  <div className={css.testimonialBio}>
+                    <div className={css.testimonialName}>
+                      <FormattedMessage id="Testimonials.nic" />
+                    </div>
+                    <div className={css.testimonialJonTitle}>
+                      <FormattedMessage id="Testimonials.nicJobTitle" />
+                    </div>
+                  </div>
+                  <div className={css.quoteIconStyles}>
+                    <Quotes />
+                  </div>
+                </div>
+                <div className={css.testimonialReferral}>
+                  <FormattedMessage id="Testimonials.nicReferral" />
+                </div>
+              </div>
+              <div className={css.testimonialWrapper}>
+                <div className={css.testimonialBox} onClick={handleRobClick}>
+                  <img
+                    src={robImage}
+                    alt="employee"
+                    className={css.sectionImage}
+                  />
+                  <div className={css.testimonialBio}>
+                    <div className={css.testimonialName}>
+                      <FormattedMessage id="Testimonials.rob" />
+                    </div>
+                    <div className={css.testimonialJonTitle}>
+                      <FormattedMessage id="Testimonials.robJobTitle" />
+                    </div>
+                  </div>
+                  <div className={css.quoteIconStyles}>
+                    <Quotes />
+                  </div>
+                </div>
+                <div className={css.testimonialReferral}>
+                  <FormattedMessage id="Testimonials.robReferral" />
+                </div>
               </div>
             </div>
-            <div className={css.testimonialWrapper}>
-              <div className={css.testimonialBox} onClick={handleJoshClick}>
-                <img
-                  src={joshImage}
-                  alt="employee"
-                  className={css.sectionImage}
-                />
-                <div className={css.testimonialBio}>
-                  <div className={css.testimonialName}>
-                    <FormattedMessage id="Testimonials.josh" />
-                  </div>
-                  <div className={css.testimonialJonTitle}>
-                    <FormattedMessage id="Testimonials.joshJobTitle" />
-                  </div>
-                </div>
-                <div className={css.quoteIconStyles}>
-                  <Quotes />
-                </div>
-              </div>
-              <div className={css.testimonialReferral}>
-                <FormattedMessage id="Testimonials.joshReferral" />
-              </div>
-            </div>
-            <div className={css.testimonialWrapper}>
-              <div className={css.testimonialBox} onClick={handleNicClick}>
-                <img
-                  src={nicImage}
-                  alt="employee"
-                  className={css.sectionImage}
-                />
-                <div className={css.testimonialBio}>
-                  <div className={css.testimonialName}>
-                    <FormattedMessage id="Testimonials.nic" />
-                  </div>
-                  <div className={css.testimonialJonTitle}>
-                    <FormattedMessage id="Testimonials.nicJobTitle" />
-                  </div>
-                </div>
-                <div className={css.quoteIconStyles}>
-                  <Quotes />
-                </div>
-              </div>
-              <div className={css.testimonialReferral}>
-                <FormattedMessage id="Testimonials.nicReferral" />
-              </div>
-            </div>
-            <div className={css.testimonialWrapper}>
-              <div className={css.testimonialBox} onClick={handleRobClick}>
-                <img
-                  src={robImage}
-                  alt="employee"
-                  className={css.sectionImage}
-                />
-                <div className={css.testimonialBio}>
-                  <div className={css.testimonialName}>
-                    <FormattedMessage id="Testimonials.rob" />
-                  </div>
-                  <div className={css.testimonialJonTitle}>
-                    <FormattedMessage id="Testimonials.robJobTitle" />
-                  </div>
-                </div>
-                <div className={css.quoteIconStyles}>
-                  <Quotes />
-                </div>
-              </div>
-              <div className={css.testimonialReferral}>
-                <FormattedMessage id="Testimonials.robReferral" />
-              </div>
-            </div>
-          </div>
+          </Marquee>
         </div>
       </div>
     </div>

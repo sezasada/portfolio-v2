@@ -19,7 +19,7 @@
 
 .bodyStyles {
   display: block;
-  width: 65%;
+  width: 75%;
 }
 
 .titleStyles {
@@ -54,7 +54,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 70px;
   }
 }
 
@@ -63,6 +62,8 @@
   padding: var(--s-10);
   width: var(--s-100);
   margin-bottom: var(--s-10);
+  margin-right: var(--s-10);
+  margin-left: var(--s-10);
 }
 
 .testimonialBox {

@@ -33,7 +33,10 @@ const Navbar = ({
   };
 
   const handleResumeClick = () => {
-    window.location.href = "/resume";
+    window.open(
+      "https://docs.google.com/document/d/e/2PACX-1vTAOqx2eFUHGAj6mZ4LoVfa62gjUn4XzHW2BWVgHfKL7QuBsIGOa7HjhRVNI40SfA/pub",
+      "_blank"
+    );
   };
 
   return (
