@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import codyImage from "../../assets/images/testimonials/cody.jpg";
 import joshImage from "../../assets/images/testimonials/josh.jpg";
 import nicImage from "../../assets/images/testimonials/nic.jpg";
-import robImage from "../../assets/images/testimonials/rob.webp";
+// import robImage from "../../assets/images/testimonials/rob.webp";
 import { ReactComponent as Quotes } from "../../assets/icons/quotes.svg";
 import Marquee from "react-fast-marquee";
 
@@ -18,9 +18,9 @@ const Testimonials = () => {
     window.open("https://www.linkedin.com/in/jhint/", "_blank");
   };
 
-  const handleRobClick = () => {
-    window.open("https://www.linkedin.com/in/rob-rotarius-97b49812/", "_blank");
-  };
+  // const handleRobClick = () => {
+  //   window.open("https://www.linkedin.com/in/rob-rotarius-97b49812/", "_blank");
+  // };
 
   const handleNicClick = () => {
     window.open("https://www.linkedin.com/in/nicdecastro/", "_blank");
@@ -108,7 +108,7 @@ const Testimonials = () => {
                   <FormattedMessage id="Testimonials.nicReferral" />
                 </div>
               </div>
-              <div className={css.testimonialWrapper}>
+              {/* <div className={css.testimonialWrapper}>
                 <div className={css.testimonialBox} onClick={handleRobClick}>
                   <img
                     src={robImage}
@@ -130,7 +130,7 @@ const Testimonials = () => {
                 <div className={css.testimonialReferral}>
                   <FormattedMessage id="Testimonials.robReferral" />
                 </div>
-              </div>
+              </div> */}
             </div>
           </Marquee>
         </div>
