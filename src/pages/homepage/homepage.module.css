@@ -1,22 +1,19 @@
 @import "../../index.css";
 
 .pageWrapper {
-  margin-left: var(--s-7);
-  margin-right: var(--s-7);
+  margin-left: var(--s-3);
+  margin-right: var(--s-3);
+
+  @media (min-width: 768px) {
+    margin-left: var(--s-7);
+    margin-right: var(--s-7);
+  }
 }
 
 .navbarWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.homepageContainer {
-  display: none;
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
 }
 
 .mobileMessage {
@@ -28,8 +25,4 @@
   color: var(--gray-900);
   font-weight: var(--font-medium);
   margin-top: var(--s-50);
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
 }
