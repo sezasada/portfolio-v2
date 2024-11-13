@@ -33,7 +33,7 @@
   font-size: var(--text-3xl);
   font-weight: var(--font-bolder);
   margin-bottom: var(--s-3);
-  padding-left: var(--s-5);
+  padding-left: var(--s-4);
 
   @media (min-width: 768px) {
     padding-left: 0;
@@ -45,7 +45,7 @@
 .subTitleStyles {
   font-size: var(--text-lg);
   margin-bottom: var(--s-5);
-  padding-left: var(--s-5);
+  padding-left: var(--s-4);
 
   @media (min-width: 768px) {
     padding-left: 0;
@@ -55,7 +55,7 @@
 }
 
 .buttonWrapper {
-  padding-left: var(--s-5);
+  padding-left: var(--s-4);
   padding-bottom: var(--s-5);
 
   @media (min-width: 768px) {

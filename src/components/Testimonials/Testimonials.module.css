@@ -6,8 +6,13 @@
   align-items: center;
   background-color: var(--gray-400);
   margin-bottom: var(--s-20);
-  padding-top: var(--s-24);
-  padding-bottom: var(--s-24);
+  padding-top: var(--s-17);
+  padding-bottom: var(--s-17);
+
+  @media (min-width: 768px) {
+    padding-top: var(--s-24);
+    padding-bottom: var(--s-24);
+  }
 }
 
 .wrapperStyles {
@@ -19,16 +24,27 @@
 
 .bodyStyles {
   display: block;
-  width: 75%;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 75%;
+  }
 }
 
 .titleStyles {
   display: flex;
-  font-size: var(--text-6xl);
+  font-size: var(--text-3xl);
   font-family: var(--font-base);
   font-weight: var(--font-bolder);
   color: var(--gray-900);
-  margin-bottom: var(--s-6);
+  margin-bottom: var(--s-3);
+  padding-left: var(--s-4);
+
+  @media (min-width: 768px) {
+    padding-left: 0;
+    margin-bottom: var(--s-6);
+    font-size: var(--text-6xl);
+  }
 }
 
 .subtitleStyles {
@@ -38,32 +54,51 @@
   font-weight: var(--font-normal);
   color: var(--gray-700);
   margin-bottom: var(--s-3);
+  padding-left: var(--s-4);
+
+  @media (min-width: 768px) {
+    padding-left: 0;
+  }
 }
 
 .divider {
+  margin-right: var(--s-4);
+  margin-left: var(--s-4);
   background-color: var(--gray-500);
   height: 1px;
   border: none;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .testimonialContainer {
-  display: block;
-  margin-top: var(--s-10);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--s-5);
 
-  @media (min-width: 1280px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  @media (min-width: 768px) {
+    margin-top: var(--s-10);
   }
 }
 
 .testimonialWrapper {
   background-color: white;
-  padding: var(--s-10);
-  width: var(--s-100);
-  margin-bottom: var(--s-10);
-  margin-right: var(--s-10);
-  margin-left: var(--s-10);
+  padding: var(--s-4);
+  width: var(--s-65);
+  margin-bottom: 0;
+  margin-right: var(--s-4);
+  margin-left: var(--s-4);
+
+  @media (min-width: 768px) {
+    width: var(--s-100);
+    padding: var(--s-10);
+    margin-right: var(--s-10);
+    margin-left: var(--s-10);
+    margin-bottom: var(--s-10);
+  }
 }
 
 .testimonialBox {
@@ -116,9 +151,13 @@
 }
 
 .quoteIconStyles {
-  display: flex;
-  justify-content: flex-end;
-  margin-right: var(--s-4);
-  margin-left: auto;
-  align-items: center;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: var(--s-4);
+    margin-left: auto;
+    align-items: center;
+  }
 }

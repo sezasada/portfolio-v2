@@ -76,6 +76,7 @@
   flex-direction: column;
   justify-content: top;
   align-items: flex-start;
+  padding-left: var(--s-4);
   height: var(--s-140);
 }
 
