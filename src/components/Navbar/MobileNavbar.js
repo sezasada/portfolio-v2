@@ -4,7 +4,7 @@ import css from "./MobileNavbar.module.css";
 import { ReactComponent as Dev } from "../../assets/icons/dev.svg";
 import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
 
-const Navbar = ({
+const MobileNavbar = ({
   scrollToAboutMe,
   scrollToContributions,
   scrollToTestimonials,
@@ -69,4 +69,4 @@ const Navbar = ({
   );
 };
 
-export default Navbar;
+export default MobileNavbar;
