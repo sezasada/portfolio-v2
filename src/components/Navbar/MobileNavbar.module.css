@@ -10,6 +10,16 @@
   align-items: center;
   padding-top: var(--s-7);
   padding-bottom: var(--s-4);
+
+  @media (min-width: 768px) {
+    padding-right: var(--s-7);
+    padding-left: var(--s-7);
+  }
+
+  @media (min-width: 1024px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
 .leftSideStyles {

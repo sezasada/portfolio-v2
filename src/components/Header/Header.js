@@ -17,7 +17,7 @@ const Header = () => {
         <div className={css.subTitleStyles}>
           <FormattedMessage id="Header.subTitle" />
         </div>
-        <div>
+        <div className={css.buttonWrapper}>
           <SecondaryButton
             className={css.contactButton}
             type="button"
