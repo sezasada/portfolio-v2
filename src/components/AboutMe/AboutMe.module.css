@@ -4,6 +4,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: var(--s-17);
+
+  @media (min-width: 768px) {
+    margin-bottom: var(--s-15);
+  }
 }
 
 .wrapperStyles {
@@ -66,9 +71,13 @@
 }
 
 .columnOne {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
 }
 
 .columnTwo {

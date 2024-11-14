@@ -3,11 +3,12 @@
 .wrapperStyles {
   display: flex;
   justify-content: center;
-  padding-top: var(--s-10);
-  padding-bottom: var(--s-10);
+  padding-top: 0;
+  margin-bottom: var(--s-17);
   width: 100%;
 
   @media (min-width: 768px) {
+    padding-bottom: var(--s-10);
     margin-top: var(--s-10);
     margin-bottom: var(--s-10);
   }

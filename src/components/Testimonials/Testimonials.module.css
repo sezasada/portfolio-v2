@@ -5,11 +5,12 @@
   justify-content: center;
   align-items: center;
   background-color: var(--gray-400);
-  margin-bottom: var(--s-20);
+  margin-bottom: var(--s-17);
   padding-top: var(--s-17);
   padding-bottom: var(--s-17);
 
   @media (min-width: 768px) {
+    margin-bottom: var(--s-20);
     padding-top: var(--s-24);
     padding-bottom: var(--s-24);
   }
