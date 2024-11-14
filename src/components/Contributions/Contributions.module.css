@@ -46,9 +46,12 @@
 .carouselStyles {
   display: block;
   width: 100%;
+  margin-left: var(--s-4);
+  margin-right: var(--s-4);
 
   @media (min-width: 768px) {
     width: var(--s-285);
+    margin: 0;
   }
 }
 

@@ -25,14 +25,17 @@ const Carousel = ({ items }) => {
           <span className={css.arrowBack}></span>
         </div>
 
-        <div className={css.slide} key={currentIndex}>
-          {items[currentIndex].video && (
-            <video src={items[currentIndex].video} controls />
-          )}
-          {items[currentIndex].image && (
-            <img src={items[currentIndex].image} alt="carousel item" />
-          )}
-        </div>
+        {items.map((item, index) => (
+          <div
+            key={index}
+            className={`${css.slide} ${
+              index === currentIndex ? css.active : ""
+            }`}
+          >
+            {item.video && <video src={item.video} controls />}
+            {item.image && <img src={item.image} alt="carousel item" />}
+          </div>
+        ))}
 
         <div className={`${css.controls} ${css.right}`} onClick={handleNext}>
           <span className={css.arrowNext}></span>
