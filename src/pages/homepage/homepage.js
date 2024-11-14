@@ -110,14 +110,14 @@ const Homepage = () => {
         <div ref={contactMeRef}>
           <ContactMe />
         </div>
-        <div>
+        {/* <div>
           <Footer
             scrollToAboutMe={scrollToAboutMe}
             scrollToContributions={scrollToContributions}
             scrollToTestimonials={scrollToTestimonials}
             scrollTocontactMe={scrollTocontactMe}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );
