@@ -57,15 +57,23 @@
   align-items: center;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1;
+  z-index: 2;
 }
 
 .controls.left {
-  left: var(--s-6);
+  left: var(--s-3);
+
+  @media (min-width: 768px) {
+    left: var(--s-6);
+  }
 }
 
 .controls.right {
-  right: var(--s-6);
+  right: var(--s-3);
+
+  @media (min-width: 768px) {
+    right: var(--s-6);
+  }
 }
 
 .slide {
@@ -76,6 +84,7 @@
   width: 100%;
   opacity: 0;
   transition: opacity 0.5s ease-out;
+  z-index: 1;
 }
 
 .slide.active {
@@ -87,6 +96,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  z-index: 2;
 }
 
 .description {

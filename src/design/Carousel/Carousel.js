@@ -32,7 +32,15 @@ const Carousel = ({ items }) => {
               index === currentIndex ? css.active : ""
             }`}
           >
-            {item.video && <video src={item.video} controls />}
+            {item.video && (
+              <video
+                index={index}
+                src={item.video}
+                controls
+                autoPlay
+                muted
+              />
+            )}
             {item.image && <img src={item.image} alt="carousel item" />}
           </div>
         ))}
