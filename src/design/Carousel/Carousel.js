@@ -1,112 +1,52 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { FormattedMessage, useIntl } from "react-intl";
+import React, { useState } from "react";
+import { FormattedMessage } from "react-intl";
 import css from "./Carousel.module.css";
 
-const Carousel = ({ items, skillsToShow = 1 }) => {
+const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const intl = useIntl();
+  const [animationDirection, setAnimationDirection] = useState("");
 
-  const displayedItems = items.slice(currentIndex, currentIndex + skillsToShow);
-
-  const updateIndex = (newIndex) => {
-    if (newIndex < 0) {
-      setCurrentIndex(items.length - skillsToShow);
-    } else if (newIndex > items.length - skillsToShow) {
-      setCurrentIndex(0);
-    } else {
-      setCurrentIndex(newIndex);
-    }
+  const handleNext = () => {
+    setAnimationDirection("next");
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
   };
 
-  const prev = useCallback(
-    (e) => {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      const newIndex = currentIndex - 1;
-      updateIndex(newIndex);
-    },
-    [currentIndex, items.length, skillsToShow]
-  );
-
-  const next = useCallback(
-    (e) => {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      const newIndex = currentIndex + 1;
-      updateIndex(newIndex);
-    },
-    [currentIndex, items.length, skillsToShow]
-  );
-
-  const onKeyUp = useCallback(
-    (e) => {
-      switch (e.keyCode) {
-        case 37:
-          prev();
-          break;
-        case 39:
-          next();
-          break;
-        default:
-      }
-    },
-    [prev, next]
-  );
-
-  useEffect(() => {
-    window.addEventListener("keyup", onKeyUp);
-
-    return () => {
-      window.removeEventListener("keyup", onKeyUp);
-    };
-  }, [onKeyUp]);
-
-  const handleRedirect = (linkId) => {
-    const link = intl.formatMessage({ id: linkId });
-    window.open(link, "_blank");
+  const handlePrev = () => {
+    setAnimationDirection("back");
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + items.length) % items.length
+    );
   };
 
   return (
-    <div className={css.carouselWrapper}>
-      <button
-        className={css.prev}
-        onClick={prev}
-        type="button"
-        aria-label="Previous item"
-      />
+    <div className={css.carousel}>
+      <div className={css.mediaWrapper}>
+        <div className={`${css.controls} ${css.left}`} onClick={handlePrev}>
+          <span className={css.arrowBack}></span>
+        </div>
 
-      <div className={css.skillsContainer}>
-        {displayedItems.map(({ id, video, image, link }, index) => (
-          <div key={index} className={css.skillWrapper}>
-            {video && (
-              <video className={css.videoStyles} src={video} controls />
-            )}
-            {image && <img className={css.imageStyles} src={image} alt={id} />}
-            <div className={css.descriptionStyles}>
-              <FormattedMessage id={id} />
-            </div>
-            {link && (
-              <div
-                className={css.linkStyles}
-                onClick={() => handleRedirect(link)}
-              >
-                <FormattedMessage id={link} />
-              </div>
-            )}
-          </div>
-        ))}
+        <div className={css.slide} key={currentIndex}>
+          {items[currentIndex].video && (
+            <video src={items[currentIndex].video} controls />
+          )}
+          {items[currentIndex].image && (
+            <img src={items[currentIndex].image} alt="carousel item" />
+          )}
+        </div>
+
+        <div className={`${css.controls} ${css.right}`} onClick={handleNext}>
+          <span className={css.arrowNext}></span>
+        </div>
       </div>
 
-      <button
-        className={css.next}
-        onClick={next}
-        type="button"
-        aria-label="Next item"
-      />
+      <div
+        className={`${css.description} ${
+          animationDirection === "next" ? css["next-enter"] : css["back-enter"]
+        }`}
+        key={`description-${currentIndex}`}
+      >
+        <FormattedMessage id={items[currentIndex].id} />
+      </div>
     </div>
   );
 };

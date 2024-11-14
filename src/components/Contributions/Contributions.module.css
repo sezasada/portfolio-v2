@@ -35,7 +35,7 @@
   background-color: var(--green-400);
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     margin-bottom: var(--s-10);
     margin-top: var(--s-10);
     padding-top: var(--s-3);
@@ -131,7 +131,7 @@
   margin-bottom: var(--s-3);
   margin-top: var(--s-7);
 
-  @media (min-width: 768px) {
+  @media (min-width: 1280px) {
     color: white;
   }
 }
