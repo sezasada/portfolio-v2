@@ -101,7 +101,7 @@
 
 .description {
   display: block;
-  font-size: var(--text-base);
+  font-size: var(--text-sm);
   font-family: var(--font-base);
   font-weight: var(--font-normal);
   color: var(--gray-900);
@@ -112,6 +112,7 @@
 
   @media (min-width: 1280px) {
     color: white;
+    font-size: var(--text-base);
   }
 }
 

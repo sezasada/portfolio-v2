@@ -1,40 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
 import css from "./MobileNavbar.module.css";
 import { ReactComponent as Dev } from "../../assets/icons/dev.svg";
 import { ReactComponent as Menu } from "../../assets/icons/menu.svg";
+import Modal from "react-modal";
+import MobileMenu from "./MobileMenu";
 
-const MobileNavbar = ({
-  scrollToAboutMe,
-  scrollToContributions,
-  scrollToTestimonials,
-  scrollTocontactMe,
-}) => {
-  const handleLinkedinClick = () => {
-    window.open("https://www.linkedin.com/in/sebastien-zasada/", "_blank");
+const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const customStyles = {
+    content: {
+      position: "relative",
+      width: "100vw",
+      height: "100vh",
+      border: "none",
+      borderRadius: 0,
+      padding: 0,
+      inset: 0,
+      backgroundColor: "white",
+    },
   };
 
-  const handleGithubClick = () => {
-    window.open("https://github.com/sezasada", "_blank");
+  const handleMobileMenuClose = () => {
+    setIsOpen(false);
   };
 
-  const handleInstagramClick = () => {
-    window.open("https://www.instagram.com/sebzasada/", "_blank");
-  };
-
-  const handleContactClick = () => {
-    window.location.href = "mailto:sezasada@icloud.com";
-  };
-
-  const handlePhoneClick = () => {
-    window.location.href = "tel:+12187900487";
-  };
-
-  const handleResumeClick = () => {
-    window.open(
-      "https://docs.google.com/document/d/e/2PACX-1vTAOqx2eFUHGAj6mZ4LoVfa62gjUn4XzHW2BWVgHfKL7QuBsIGOa7HjhRVNI40SfA/pub",
-      "_blank"
-    );
+  const handleMobileMenuOpen = () => {
+    setIsOpen(true);
   };
 
   return (
@@ -59,11 +52,21 @@ const MobileNavbar = ({
         </div>
         <div className={css.rightSideStyles}>
           <div className={css.emailWrapper}>
-            <div className={css.contactTitleStyles}>
+            <div
+              className={css.contactTitleStyles}
+              onClick={handleMobileMenuOpen}
+            >
               <Menu />
             </div>
           </div>
         </div>
+        <Modal
+          isOpen={isOpen}
+          onRequestClose={handleMobileMenuClose}
+          style={customStyles}
+        >
+          <MobileMenu setIsOpen={setIsOpen} />
+        </Modal>
       </div>
     </div>
   );
