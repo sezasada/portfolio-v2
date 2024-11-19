@@ -279,6 +279,10 @@
   --transition-fast: ease-in-out 0.1s;
 }
 
+body {
+  margin: 0; /* Remove the default margin */
+}
+
 @custom-media --screen-sm (min-width: 640px);
 @custom-media --screen-md (min-width: 768px);
 @custom-media --screen-lg (min-width: 1024px);

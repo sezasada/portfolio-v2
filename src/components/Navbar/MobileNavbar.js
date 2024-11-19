@@ -11,16 +11,25 @@ const MobileNavbar = () => {
 
   const customStyles = {
     content: {
-      position: "relative",
+      position: "absolute",
+      top: "0",
+      left: "0",
+      right: "0",
+      bottom: "0",
       width: "100vw",
       height: "100vh",
       border: "none",
       borderRadius: 0,
       padding: 0,
-      inset: 0,
       backgroundColor: "white",
+      zIndex: 100,
+    },
+    overlay: {
+      zIndex: 100,
+      backgroundColor: "rgba(0, 0, 0, 0.5)",
     },
   };
+  
 
   const handleMobileMenuClose = () => {
     setIsOpen(false);
@@ -43,35 +52,39 @@ const MobileNavbar = () => {
   }, [isOpen]);
 
   return (
-    <div className={css.navbarContainer}>
-      <div className={css.topSection}>
-        <div className={css.leftSideStyles}>
-          <div className={css.logoWrapper}>
-            <div className={css.logoStyles}>
-              <div className={css.iconWrapper}>
-                <Dev />
+    <>
+      <div className={css.navbarContainer}>
+        <div className={css.topSection}>
+          <div className={css.leftSideStyles}>
+            <div className={css.logoWrapper}>
+              <div className={css.logoStyles}>
+                <div className={css.iconWrapper}>
+                  <Dev />
+                </div>
+              </div>
+              <div>
+                <div className={css.nameWrapper}>
+                  <FormattedMessage id="Navbar.firstName" />
+                </div>
+                <div className={css.titleWrapper}>
+                  <FormattedMessage id="Navbar.title" />
+                </div>
               </div>
             </div>
-            <div>
-              <div className={css.nameWrapper}>
-                <FormattedMessage id="Navbar.firstName" />
-              </div>
-              <div className={css.titleWrapper}>
-                <FormattedMessage id="Navbar.title" />
+          </div>
+          <div className={css.rightSideStyles}>
+            <div className={css.emailWrapper}>
+              <div
+                className={css.contactTitleStyles}
+                onClick={handleMobileMenuOpen}
+              >
+                <Menu />
               </div>
             </div>
           </div>
         </div>
-        <div className={css.rightSideStyles}>
-          <div className={css.emailWrapper}>
-            <div
-              className={css.contactTitleStyles}
-              onClick={handleMobileMenuOpen}
-            >
-              <Menu />
-            </div>
-          </div>
-        </div>
+      </div>
+      <div className={css.navbarMenuContainer}>
         <Modal
           isOpen={isOpen}
           onRequestClose={handleMobileMenuClose}
@@ -80,7 +93,7 @@ const MobileNavbar = () => {
           <MobileMenu setIsOpen={setIsOpen} />
         </Modal>
       </div>
-    </div>
+    </>
   );
 };
 

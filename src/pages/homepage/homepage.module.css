@@ -3,7 +3,7 @@
 .pageWrapper {
   margin-left: 0;
   margin-right: 0;
-  
+
   @media (min-width: 768px) {
     margin-left: var(--s-7);
     margin-right: var(--s-7);
@@ -45,4 +45,15 @@
   color: var(--gray-900);
   font-weight: var(--font-medium);
   margin-top: var(--s-50);
+}
+
+.headerWrapper {
+  height: 90vh;
+  width: 100%;
+  margin-bottom: var(--s-17);
+
+  @media (min-width: 1024px) {
+    margin-bottom: var(--s-20);
+    height: 83vh;
+  }
 }

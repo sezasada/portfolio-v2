@@ -44,7 +44,7 @@ const MobileNavbar = ({ setIsOpen }) => {
 
   return (
     <>
-      <div className={css.navbarContainer}>
+      <div className={css.navbarMenuContainer}>
         <div className={css.topSectionStyles}>
           <div className={css.iconStyles} onClick={handleMobileMenuClose}>
             <Close />
