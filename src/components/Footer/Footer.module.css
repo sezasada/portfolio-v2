@@ -78,10 +78,9 @@
 }
 
 .iconWrapper {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
+  display: block;
+  height: auto;
+  width: auto;
 }
 
 .nameWrapper {

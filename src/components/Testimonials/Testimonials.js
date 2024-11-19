@@ -15,7 +15,7 @@ const Testimonials = () => {
   useEffect(() => {
     const updateSpeed = () => {
       if (window.innerWidth >= 1024) {
-        setMarqueeSpeed(50);
+        setMarqueeSpeed(35);
       } else {
         setMarqueeSpeed(20);
       }
@@ -54,7 +54,7 @@ const Testimonials = () => {
             <FormattedMessage id="Testimonials.subtitle" />
           </div>
           <hr className={css.divider} />
-          <Marquee autoFill pauseOnHover speed={marqueeSpeed}>
+          <Marquee autoFill speed={marqueeSpeed}>
             <div className={css.testimonialContainer}>
               <div className={css.testimonialWrapper}>
                 <div className={css.testimonialBox} onClick={handleCodyClick}>
@@ -125,29 +125,6 @@ const Testimonials = () => {
                   <FormattedMessage id="Testimonials.nicReferral" />
                 </div>
               </div>
-              {/* <div className={css.testimonialWrapper}>
-                <div className={css.testimonialBox} onClick={handleRobClick}>
-                  <img
-                    src={robImage}
-                    alt="employee"
-                    className={css.sectionImage}
-                  />
-                  <div className={css.testimonialBio}>
-                    <div className={css.testimonialName}>
-                      <FormattedMessage id="Testimonials.rob" />
-                    </div>
-                    <div className={css.testimonialJonTitle}>
-                      <FormattedMessage id="Testimonials.robJobTitle" />
-                    </div>
-                  </div>
-                  <div className={css.quoteIconStyles}>
-                    <Quotes />
-                  </div>
-                </div>
-                <div className={css.testimonialReferral}>
-                  <FormattedMessage id="Testimonials.robReferral" />
-                </div>
-              </div> */}
             </div>
           </Marquee>
         </div>

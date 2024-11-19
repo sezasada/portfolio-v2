@@ -29,7 +29,7 @@ const Contributions = () => {
     },
   ];
 
-  const skillsTwo = [
+  const personalContributions = [
     { id: "Contributions.marketWatcher", video: marketWatcherVideo },
     { id: "Contributions.farmWorks", image: farmworksImage },
     { id: "Contributions.cryptoExchange", image: cryptoImage },
@@ -52,7 +52,7 @@ const Contributions = () => {
             <div className={css.serviceStyles}>
               <FormattedMessage id="Contributions.landtrustCopy" />
             </div>
-            <Carousel items={landtrustContributions} />
+            <Carousel items={landtrustContributions} id="landtrustCarousel" />
           </div>
         </div>
         <div className={css.carouselContainer}>
@@ -60,7 +60,7 @@ const Contributions = () => {
             <div className={css.serviceStyles}>
               <FormattedMessage id="Contributions.personalCopy" />
             </div>
-            <Carousel items={skillsTwo} />
+            <Carousel items={personalContributions} id="personalCarousel" />
           </div>
         </div>
       </div>
