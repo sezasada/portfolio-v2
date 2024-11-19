@@ -92,7 +92,7 @@ const Homepage = () => {
             />
           </div>
         </div>
-        <div>
+        <div className={css.headerWrapper}>
           <Header />
         </div>
         <div ref={aboutMeRef}>
