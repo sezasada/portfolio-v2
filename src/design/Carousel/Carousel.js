@@ -42,6 +42,7 @@ const Carousel = ({ items }) => {
                   controls={false}
                   loop
                   playing={index === currentIndex}
+                  muted={true}
                   playsinline
                 />
               )}
