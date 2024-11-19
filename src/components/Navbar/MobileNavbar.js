@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import css from "./MobileNavbar.module.css";
 import { ReactComponent as Dev } from "../../assets/icons/dev.svg";
@@ -29,6 +29,18 @@ const MobileNavbar = () => {
   const handleMobileMenuOpen = () => {
     setIsOpen(true);
   };
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <div className={css.navbarContainer}>

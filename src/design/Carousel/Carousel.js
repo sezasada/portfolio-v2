@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactPlayer from "react-player";
 import { FormattedMessage } from "react-intl";
 import css from "./Carousel.module.css";
 
@@ -25,25 +26,29 @@ const Carousel = ({ items }) => {
           <span className={css.arrowBack}></span>
         </div>
 
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`${css.slide} ${
-              index === currentIndex ? css.active : ""
-            }`}
-          >
-            {item.video && (
-              <video
-                index={index}
-                src={item.video}
-                controls
-                autoPlay
-                muted
-              />
-            )}
-            {item.image && <img src={item.image} alt="carousel item" />}
-          </div>
-        ))}
+        {items.map((item, index) => {
+          return (
+            <div
+              key={index}
+              className={`${css.slide} ${
+                index === currentIndex ? css.active : css.hidden
+              }`}
+            >
+              {item.video && (
+                <ReactPlayer
+                  url={item.video}
+                  width="100%"
+                  height="100%"
+                  controls={false}
+                  loop
+                  playing={index === currentIndex}
+                  playsinline
+                />
+              )}
+              {item.image && <img src={item.image} alt="carousel item" />}
+            </div>
+          );
+        })}
 
         <div className={`${css.controls} ${css.right}`} onClick={handleNext}>
           <span className={css.arrowNext}></span>
@@ -56,7 +61,7 @@ const Carousel = ({ items }) => {
         }`}
         key={`description-${currentIndex}`}
       >
-        <FormattedMessage id={items[currentIndex].id} />
+        <FormattedMessage id={items[currentIndex]?.id} />
       </div>
     </div>
   );
