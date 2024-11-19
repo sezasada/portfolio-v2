@@ -9,29 +9,35 @@ const Header = () => {
     window.location.href = "mailto:sezasada@icloud.com";
   };
   return (
-    <div className={css.wrapperStyles}>
-      <div className={css.contentStyles}>
-        <div className={css.titleStyles}>
-          <FormattedMessage id="Header.title" />
+    <div className={css.containerStyles}>
+      <div className={css.wrapperStyles}>
+        <div className={css.contentStyles}>
+          <div className={css.titleStyles}>
+            <FormattedMessage id="Header.title" />
+          </div>
+          <div className={css.subTitleStyles}>
+            <FormattedMessage id="Header.subTitle" />
+          </div>
+          <div className={css.buttonWrapper}>
+            <SecondaryButton
+              className={css.contactButton}
+              type="button"
+              onClick={handleContactClick}
+            >
+              <div>
+                <FormattedMessage id="Header.contactButton" />
+              </div>
+            </SecondaryButton>
+          </div>
         </div>
-        <div className={css.subTitleStyles}>
-          <FormattedMessage id="Header.subTitle" />
-        </div>
-        <div>
-          <SecondaryButton
-            className={css.contactButton}
-            type="button"
-            onClick={handleContactClick}
-          >
-            <div>
-              <FormattedMessage id="Header.contactButton" />
-            </div>
-          </SecondaryButton>
-        </div>
-      </div>
-      <div className={css.imageContainer}>
-        <div className={css.imageWrapper}>
-          <img src={profileImage} alt="sebastien" className={css.headerImage} />
+        <div className={css.imageContainer}>
+          <div className={css.imageWrapper}>
+            <img
+              src={profileImage}
+              alt="sebastien"
+              className={css.headerImage}
+            />
+          </div>
         </div>
       </div>
     </div>

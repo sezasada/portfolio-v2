@@ -3,13 +3,13 @@ import AboutMe from "../../components/AboutMe/AboutMe";
 import { useLocation } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import Navbar from "../../components/Navbar/Navbar";
+import MobileNavbar from "../../components/Navbar/MobileNavbar";
 import Skills from "../../components/Skills/Skills";
 import Contributions from "../../components/Contributions/Contributions";
 import Testimonials from "../../components/Testimonials/Testimonials";
 import ContactMe from "../../components/ContactMe/ContactMe";
 import Footer from "../../components/Footer/Footer";
 import css from "./homepage.module.css";
-import { FormattedMessage } from "react-intl";
 
 const Homepage = () => {
   const aboutMeRef = useRef(null);
@@ -72,18 +72,25 @@ const Homepage = () => {
   }, [location.hash]);
 
   return (
-    <div className={css.pageWrapper}>
-      <div className={css.mobileMessage}>
-        <FormattedMessage id="Homepage.mobileMessage" />
+    <>
+      <div className={css.mobileStyles}>
+        <MobileNavbar
+          scrollToAboutMe={scrollToAboutMe}
+          scrollToContributions={scrollToContributions}
+          scrollToTestimonials={scrollToTestimonials}
+          scrollTocontactMe={scrollTocontactMe}
+        />
       </div>
-      <div className={css.homepageContainer}>
+      <div className={css.pageWrapper}>
         <div className={css.navbarWrapper}>
-          <Navbar
-            scrollToAboutMe={scrollToAboutMe}
-            scrollToContributions={scrollToContributions}
-            scrollToTestimonials={scrollToTestimonials}
-            scrollTocontactMe={scrollTocontactMe}
-          />
+          <div className={css.desktopStyles}>
+            <Navbar
+              scrollToAboutMe={scrollToAboutMe}
+              scrollToContributions={scrollToContributions}
+              scrollToTestimonials={scrollToTestimonials}
+              scrollTocontactMe={scrollTocontactMe}
+            />
+          </div>
         </div>
         <div>
           <Header />
@@ -112,7 +119,7 @@ const Homepage = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import codyImage from "../../assets/images/testimonials/cody.jpg";
 import joshImage from "../../assets/images/testimonials/josh.jpg";
@@ -10,6 +10,23 @@ import Marquee from "react-fast-marquee";
 import css from "./Testimonials.module.css";
 
 const Testimonials = () => {
+  const [marqueeSpeed, setMarqueeSpeed] = useState(20);
+
+  useEffect(() => {
+    const updateSpeed = () => {
+      if (window.innerWidth >= 1024) {
+        setMarqueeSpeed(50);
+      } else {
+        setMarqueeSpeed(20);
+      }
+    };
+
+    updateSpeed();
+    window.addEventListener("resize", updateSpeed);
+
+    return () => window.removeEventListener("resize", updateSpeed);
+  }, []);
+
   const handleCodyClick = () => {
     window.open("https://www.linkedin.com/in/cody-allen-hebert/", "_blank");
   };
@@ -37,7 +54,7 @@ const Testimonials = () => {
             <FormattedMessage id="Testimonials.subtitle" />
           </div>
           <hr className={css.divider} />
-          <Marquee autoFill pauseOnHover>
+          <Marquee autoFill pauseOnHover speed={marqueeSpeed}>
             <div className={css.testimonialContainer}>
               <div className={css.testimonialWrapper}>
                 <div className={css.testimonialBox} onClick={handleCodyClick}>

@@ -1,14 +1,26 @@
 @import "../../index.css";
 
-.wrapperStyles {
+.containerStyles {
+  width: 100%;
+  background-color: var(--gray-400);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: var(--s-17);
+}
+
+.wrapperStyles {
   font-family: var(--font-base);
-  background-color: var(--gray-400);
   width: 100%;
-  height: var(--s-230);
-  margin-bottom: var(--s-20);
+  height: 100%;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: var(--s-230);
+  }
 }
 
 .contentStyles {
@@ -16,19 +28,59 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 60%;
-  padding-left: var(--s-40);
+  padding-top: var(--s-7);
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 }
 
 .titleStyles {
-  font-size: var(--text-7xl);
+  font-size: var(--text-3xl);
   font-weight: var(--font-bolder);
-  margin-bottom: var(--s-8);
+  margin-bottom: var(--s-3);
+  padding-left: var(--s-4);
+
+  @media (min-width: 768px) {
+    font-size: var(--text-5xl);
+    margin-bottom: var(--s-8);
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 0;
+    font-size: var(--text-6xl);
+  }
 }
 
 .subTitleStyles {
-  font-size: var(--text-3xl);
-  margin-bottom: var(--s-8);
+  font-size: var(--text-lg);
+  margin-bottom: var(--s-5);
+  padding-left: var(--s-4);
+
+  @media (min-width: 768px) {
+    margin-bottom: var(--s-8);
+    font-size: var(--text-2xl);
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 0;
+    font-size: var(--text-3xl);
+  }
+}
+
+.buttonWrapper {
+  padding-left: var(--s-4);
+  padding-bottom: var(--s-5);
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 0;
+    font-size: var(--text-3xl);
+  }
 }
 
 .contactButton {
@@ -38,21 +90,33 @@
 }
 
 .imageContainer {
-  width: 40%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  margin-right: var(--s-40);
+  margin-right: 0;
+
+  @media (min-width: 1024px) {
+    width: 40%;
+  }
+
+  @media (min-width: 1280px) {
+    width: 40%;
+  }
 }
 
 .imageWrapper {
   width: 100%;
-  height: var(--s-165);
+  height: var(--s-100);
   display: flex;
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
+
+  @media (min-width: 768px) {
+    height: var(--s-165);
+  }
 }
 
 .headerImage {

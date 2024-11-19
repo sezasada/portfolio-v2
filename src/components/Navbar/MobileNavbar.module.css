@@ -1,0 +1,112 @@
+@import "../../index.css";
+
+.navbarContainer {
+  width: 100%;
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--s-7);
+  padding-bottom: var(--s-4);
+
+  @media (min-width: 768px) {
+    padding-right: var(--s-7);
+    padding-left: var(--s-7);
+  }
+
+  @media (min-width: 1024px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.leftSideStyles {
+  flex: 1;
+  width: 100%;
+}
+
+.rightSideStyles {
+  display: flex;
+  justify-content: flex-end;
+  max-width: var(--s-6);
+  flex: 1;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.topSectionStyles {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  width: 100%;
+}
+.fkkfnf {
+  width: 100%;
+  height: 100%;
+}
+
+.linkRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--s-7);
+  margin-left: var(--s-4);
+  font-size: var(--text-xl);
+  font-family: var(--font-base);
+  gap: 12px;
+  cursor: pointer;
+  color: var(--gray-900);
+}
+
+.iconStyles {
+  height: var(--s-6);
+  width: var(--s-6);
+  padding-right: var(--s-4);
+  padding-top: var(--s-4);
+}
+
+.contactIconStyles {
+  height: var(--s-6);
+  width: var(--s-6);
+}
+
+.logoStyles {
+  height: var(--s-8);
+  width: var(--s-8);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.nameWrapper {
+  font-family: var(--font-base);
+  font-weight: var(--font-medium);
+  font-size: var(--text-xl);
+}
+
+.titleWrapper {
+  font-family: var(--font-base);
+  font-size: var(--text-xs);
+  color: var(--gray-800);
+  font-weight: var(--font-light);
+}
+
+.emailWrapper {
+  text-align: left;
+}
+
+.contactTitleStyles {
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  color: var(--gray-600);
+  font-weight: var(--font-extra-light);
+}

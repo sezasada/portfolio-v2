@@ -113,10 +113,8 @@ const Footer = ({
             </div>
             <FormattedMessage id="Footer.createdBy" />
           </div>
-          <div className={css.iconSection}>
-            <div className={css.copyStyles}>
-              <FormattedMessage id="Footer.rights" />
-            </div>
+          <div className={css.copyStyles}>
+            <FormattedMessage id="Footer.rights" />
           </div>
         </div>
       </div>
