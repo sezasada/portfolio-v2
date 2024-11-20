@@ -32,36 +32,6 @@
   }
 }
 
-.carouselWrapper {
-  background-color: transparent;
-  padding: var(--s-2);
-  border-radius: var(--s-2);
-  width: 100%;
-}
-
-.carouselTestimonialContainer {
-  background-color: var(--white);
-  padding: var(--s-4);
-}
-
-.carouselContainer {
-  margin-left: var(--s-4);
-  margin-right: var(--s-4);
-  margin-top: var(--s-4);
-
-  @media (min-width: 1024px) {
-    display: none;
-  }
-}
-
-.marqueeWrapper {
-  display: none;
-
-  @media (min-width: 1024px) {
-    display: block;
-  }
-}
-
 .titleStyles {
   display: flex;
   font-size: var(--text-3xl);
@@ -146,11 +116,6 @@
   }
 }
 
-.testimonialBio {
-  text-decoration: underline;
-  text-align: left;
-}
-
 .testimonialName {
   display: flex;
   font-size: var(--text-lg);
@@ -171,17 +136,12 @@
 .sectionImage {
   display: flex;
   overflow: hidden;
-  max-width: var(--s-17);
-  max-height: var(--s-17);
+  width: var(--s-17);
+  height: var(--s-17);
   object-fit: cover;
   border-radius: 50%;
   margin-right: 20px;
   margin-left: 10px;
-
-  @media (min-width: 1024px) {
-    width: var(--s-20);
-    height: var(--s-20);
-  }
 }
 
 .testimonialReferral {
@@ -189,7 +149,6 @@
   font-family: var(--font-base);
   color: var(--gray-600);
   font-style: italic;
-  text-align: left;
 }
 
 .quoteIconStyles {
