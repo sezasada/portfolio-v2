@@ -34,19 +34,19 @@ const Contributions = () => {
       id: "Contributions.cryptoExchange",
       image: cryptoImage,
       title: "Contributions.cryptoExchangeTitle",
-      code: "https://github.com/sezasada/cryptoexchange-v2"
+      code: "https://github.com/sezasada/cryptoexchange-v2",
     },
     {
       id: "Contributions.marketWatcher",
       video: marketWatcherVideo,
       title: "Contributions.marketWatcherTitle",
-      code: "https://github.com/sezasada/Solo"
+      code: "https://github.com/sezasada/Solo",
     },
     {
       id: "Contributions.farmWorks",
       image: farmworksImage,
       title: "Contributions.farmWorksTitle",
-      code: "https://github.com/sezasada/task_portal"
+      code: "https://github.com/sezasada/task_portal",
     },
   ];
 
@@ -54,9 +54,12 @@ const Contributions = () => {
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>
         <div className={css.bodyStyles}>
-          <div className={css.titleStyles}>
-            <FormattedMessage id="Contributions.title" />
+          <div className={css.titleWrapper}>
+            <div className={css.titleStyles}>
+              <FormattedMessage id="Contributions.title" />
+            </div>
           </div>
+
           <div className={css.subtitleStyles}>
             <FormattedMessage id="Contributions.subtitle" />
           </div>

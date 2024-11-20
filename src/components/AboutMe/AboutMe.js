@@ -16,8 +16,10 @@ const AboutMe = ({ scrollToContributions }) => {
           <div className={css.boxStylesTwo} />
         </div>
         <div className={css.columnTwo}>
-          <div className={css.titleStyles}>
-            <FormattedMessage id="AboutMe.title" />
+          <div className={css.titleWrapper}>
+            <div className={css.titleStyles}>
+              <FormattedMessage id="AboutMe.title" />
+            </div>
           </div>
           <div className={css.subtitleStyles}>
             <FormattedMessage id="AboutMe.subTitle" />
