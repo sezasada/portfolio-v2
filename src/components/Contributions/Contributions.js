@@ -31,6 +31,12 @@ const Contributions = () => {
       title: "Contributions.listingPageRedesignTitle",
     },
     {
+      id: "Contributions.cryptoExchange",
+      image: cryptoImage,
+      title: "Contributions.cryptoExchangeTitle",
+      code: "https://github.com/sezasada/cryptoexchange-v2"
+    },
+    {
       id: "Contributions.marketWatcher",
       video: marketWatcherVideo,
       title: "Contributions.marketWatcherTitle",
@@ -41,12 +47,6 @@ const Contributions = () => {
       image: farmworksImage,
       title: "Contributions.farmWorksTitle",
       code: "https://github.com/sezasada/task_portal"
-    },
-    {
-      id: "Contributions.cryptoExchange",
-      image: cryptoImage,
-      title: "Contributions.cryptoExchangeTitle",
-      code: "https://github.com/sezasada/cryptoexchange-v2"
     },
   ];
 
