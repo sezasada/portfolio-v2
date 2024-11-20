@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactPlayer from "react-player";
 import { FormattedMessage } from "react-intl";
 import css from "./Carousel.module.css";
@@ -6,6 +6,20 @@ import { SecondaryButton } from "../../design/Button/Button";
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -45,7 +59,7 @@ const Carousel = ({ items }) => {
                     height="auto"
                     controls={false}
                     loop
-                    playing={index === currentIndex}
+                    playing={isMobile || index === currentIndex}
                     muted={true}
                     playsinline
                   />
