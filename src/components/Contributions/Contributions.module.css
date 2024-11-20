@@ -104,15 +104,17 @@
   @media (min-width: 768px) {
     margin-bottom: var(--s-5);
     font-size: var(--text-4xl);
-    padding-left: 0;
+    padding: 0;
   }
 
   @media (min-width: 1024px) {
     font-size: var(--text-5xl);
+    padding: 0;
   }
 
   @media (min-width: 1280px) {
     margin-bottom: var(--s-7);
+    padding: 0;
     font-size: var(--text-6xl);
   }
 }
