@@ -72,7 +72,7 @@
   padding-left: var(--s-4);
 
   @media (min-width: 768px) {
-    padding-left: 0;
+    padding-left: 0 !important;
     margin-bottom: var(--s-6);
     font-size: var(--text-6xl);
   }
