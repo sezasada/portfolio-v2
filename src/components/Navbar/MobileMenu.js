@@ -58,10 +58,6 @@ const MobileNavbar = ({ setIsOpen }) => {
           <Github className={css.icon} />
           <FormattedMessage id="Navbar.github" />
         </div>
-        <div className={css.linkRow} onClick={handleInstagramClick}>
-          <InstagramSquare className={css.icon} />
-          <FormattedMessage id="Navbar.instagram" />
-        </div>
         <div className={css.linkRow} onClick={handleContactClick}>
           <Mail className={css.icon} />
           <FormattedMessage id="Navbar.contactCta" />
@@ -73,6 +69,10 @@ const MobileNavbar = ({ setIsOpen }) => {
         <div className={css.linkRow} onClick={handleResumeClick}>
           <Paper className={css.icon} />
           <FormattedMessage id="Resume.title" />
+        </div>
+        <div className={css.linkRow} onClick={handleInstagramClick}>
+          <InstagramSquare className={css.icon} />
+          <FormattedMessage id="Navbar.instagram" />
         </div>
       </div>
     </>
