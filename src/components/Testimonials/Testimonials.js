@@ -87,8 +87,10 @@ const Testimonials = () => {
               showStatus={false}
               showThumbs={false}
               autoPlay={false}
-              interval={5000}
               useKeyboardArrows={true}
+              swipeable={true}
+              preventMovementUntilSwipeScrollTolerance={true}
+              swipeScrollTolerance={5}
             >
               {testimonials.map((testimonial, index) => (
                 <div key={index} className={css.carouselWrapper}>
