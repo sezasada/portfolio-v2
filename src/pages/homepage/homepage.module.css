@@ -50,7 +50,6 @@
 .headerWrapper {
   height: 90vh;
   width: 100%;
-  margin-bottom: var(--s-17);
 
   @media (min-width: 1024px) {
     margin-bottom: var(--s-20);
