@@ -15,24 +15,39 @@ const Contributions = () => {
     {
       id: "Contributions.fieldnotes",
       video: fieldnotesVideo,
-      link: "Contributions.fieldnotesLink",
+      link: "https://landtrust.com/fieldnotes",
+      title: "Contributions.fieldnotesTitle",
     },
     {
       id: "Contributions.homepage",
       video: homepageVideo,
-      link: "Contributions.homepageLink",
+      link: "https://landtrust.com",
+      title: "Contributions.homepageTitle",
     },
     {
       id: "Contributions.listingPage",
       video: listingVideo,
-      link: "Contributions.listingPageLink",
+      link: "https://landtrust.com/l/sheehy-ranch/62156d20-7762-48d2-aa67-e0f89a7a3552",
+      title: "Contributions.listingPageRedesignTitle",
     },
-  ];
-
-  const personalContributions = [
-    { id: "Contributions.marketWatcher", video: marketWatcherVideo },
-    { id: "Contributions.farmWorks", image: farmworksImage },
-    { id: "Contributions.cryptoExchange", image: cryptoImage },
+    {
+      id: "Contributions.marketWatcher",
+      video: marketWatcherVideo,
+      title: "Contributions.marketWatcherTitle",
+      code: "https://github.com/sezasada/Solo"
+    },
+    {
+      id: "Contributions.farmWorks",
+      image: farmworksImage,
+      title: "Contributions.farmWorksTitle",
+      code: "https://github.com/sezasada/task_portal"
+    },
+    {
+      id: "Contributions.cryptoExchange",
+      image: cryptoImage,
+      title: "Contributions.cryptoExchangeTitle",
+      code: "https://github.com/sezasada/cryptoexchange-v2"
+    },
   ];
 
   return (
@@ -49,18 +64,7 @@ const Contributions = () => {
         <hr className={css.divider} />
         <div className={css.carouselContainer}>
           <div className={css.carouselStyles}>
-            <div className={css.serviceStyles}>
-              <FormattedMessage id="Contributions.landtrustCopy" />
-            </div>
             <Carousel items={landtrustContributions} id="landtrustCarousel" />
-          </div>
-        </div>
-        <div className={css.carouselContainer}>
-          <div className={css.carouselStyles}>
-            <div className={css.serviceStyles}>
-              <FormattedMessage id="Contributions.personalCopy" />
-            </div>
-            <Carousel items={personalContributions} id="personalCarousel" />
           </div>
         </div>
       </div>
