@@ -20,11 +20,8 @@ const Carousel = ({ items }) => {
                   url={item.video}
                   width="100%"
                   height="auto"
-                  controls={false}
+                  controls={true}
                   loop
-                  playing={true}
-                  muted={true}
-                  playsinline
                 />
               )}
               {item.image && <img src={item.image} alt="carousel item" />}

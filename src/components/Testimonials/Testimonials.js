@@ -4,9 +4,12 @@ import codyImage from "../../assets/images/testimonials/cody.jpg";
 import joshImage from "../../assets/images/testimonials/josh.jpg";
 import nicImage from "../../assets/images/testimonials/nic.jpg";
 // import robImage from "../../assets/images/testimonials/rob.webp";
+import {
+  ScrollingCarousel,
+  Step,
+} from "../../design/ScrollingCarousel/ScrollingCarousel";
 import { ReactComponent as Quotes } from "../../assets/icons/quotes.svg";
 import Marquee from "react-fast-marquee";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import css from "./Testimonials.module.css";
@@ -81,19 +84,9 @@ const Testimonials = () => {
           </div>
           <hr className={css.divider} />
           <div className={css.carouselContainer}>
-            <Carousel
-              centerMode={true}
-              showArrows={false}
-              showStatus={false}
-              showThumbs={false}
-              autoPlay={false}
-              useKeyboardArrows={true}
-              swipeable={true}
-              preventMovementUntilSwipeScrollTolerance={true}
-              swipeScrollTolerance={5}
-            >
+            <ScrollingCarousel className={css.carousel}>
               {testimonials.map((testimonial, index) => (
-                <div key={index} className={css.carouselWrapper}>
+                <Step key={index} className={css.carouselWrapper}>
                   <div className={css.carouselTestimonialContainer}>
                     <div
                       className={css.testimonialBox}
@@ -120,9 +113,9 @@ const Testimonials = () => {
                       {testimonial.referral}
                     </div>
                   </div>
-                </div>
+                </Step>
               ))}
-            </Carousel>
+            </ScrollingCarousel>
           </div>
           <div className={css.marqueeWrapper}>
             <Marquee autoFill speed={marqueeSpeed}>

@@ -1,0 +1,141 @@
+
+.root {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.step {
+  scroll-snap-align: center;
+  flex-basis: 100%;
+  flex-shrink: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (--screen-md) {
+    flex-basis: 100%;
+  }
+}
+
+.controls {
+  display: none;
+
+  @media (--screen-md) {
+    display: block;
+  }
+}
+
+.button {
+  position: absolute;
+  top: calc(50% - (var(--s-12) / 2));
+  width: var(--s-7);
+  height: var(--s-7);
+  border-radius: 50%;
+  padding: var(--s-1);
+  background: var(--white);
+  border-color: transparent;
+  box-shadow: var(--box-shadow);
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-10);
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.07);
+  opacity: 1;
+}
+
+.buttonLeft {
+  left: 6px;
+}
+
+.buttonRight {
+  right: 6px;
+}
+
+.icon {
+  width: var(--s-3);
+  height: var(--s-3);
+  color: var(--black);
+}
+
+.dots {
+  position: absolute;
+  bottom: var(--s-2);
+  left: 0;
+  right: 0;
+  z-index: var(--z-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dotsInner {
+  display: flex;
+  overflow: hidden;
+}
+
+.dot {
+  position: relative;
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: transform 500ms;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: var(--white);
+    transition: opacity 500ms, transform 500ms;
+    opacity: 0.75;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.dotDistance2 {
+  &::after {
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.dotDistance3 {
+  &::after {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+}
+
+.dotDistanceGreaterThan3 {
+  &::after {
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+}
+
+.dotVisible {
+  &::after {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
