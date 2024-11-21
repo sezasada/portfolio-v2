@@ -32,11 +32,21 @@
   }
 }
 
+.carousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
 .carouselWrapper {
   background-color: transparent;
-  padding: var(--s-2);
-  border-radius: var(--s-2);
-  width: 100%;
+  max-width: 78%;
+  flex-shrink: 0;
+  margin-right: var(--s-4);
+}
+
+.carouselWrapper:last-child {
+  margin-right: 0;
 }
 
 .carouselTestimonialContainer {
@@ -44,10 +54,11 @@
   padding: var(--s-4);
 }
 
+
 .carouselContainer {
-  margin-left: var(--s-4);
-  margin-right: var(--s-4);
-  margin-top: var(--s-4);
+  display: flex;
+  padding-left: var(--s-4);
+  padding-right: var(--s-4);
 
   @media (min-width: 1024px) {
     display: none;
@@ -94,6 +105,7 @@
 
 .divider {
   margin-right: var(--s-4);
+  margin-bottom: var(--s-6);
   margin-left: var(--s-4);
   background-color: var(--gray-500);
   height: 1px;
@@ -136,7 +148,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-bottom: var(--s-4);
+  margin-bottom: var(--s-3);
   cursor: pointer;
   transition: transform 0.3s ease;
 
