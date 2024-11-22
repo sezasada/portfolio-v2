@@ -53,3 +53,29 @@
   border: none;
   width: 100%;
 }
+
+
+.sendButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.sendButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.responseStyles {
+  margin-top: 20px;
+  color: #28a745;
+}
+
+.errorStyles {
+  margin-top: 20px;
+  color: #dc3545;
+}
