@@ -3,7 +3,7 @@ import { FormattedMessage } from "react-intl";
 import codyImage from "../../assets/images/testimonials/cody.jpg";
 import joshImage from "../../assets/images/testimonials/josh.jpg";
 import nicImage from "../../assets/images/testimonials/nic.jpg";
-// import robImage from "../../assets/images/testimonials/rob.webp";
+import robImage from "../../assets/images/testimonials/rob.webp";
 import {
   ScrollingCarousel,
   Step,
@@ -40,9 +40,9 @@ const Testimonials = () => {
     window.open("https://www.linkedin.com/in/jhint/", "_blank");
   };
 
-  // const handleRobClick = () => {
-  //   window.open("https://www.linkedin.com/in/rob-rotarius-97b49812/", "_blank");
-  // };
+  const handleRobClick = () => {
+    window.open("https://www.linkedin.com/in/rob-rotarius-97b49812/", "_blank");
+  };
 
   const handleNicClick = () => {
     window.open("https://www.linkedin.com/in/nicdecastro/", "_blank");
@@ -187,6 +187,29 @@ const Testimonials = () => {
                   </div>
                   <div className={css.testimonialReferral}>
                     <FormattedMessage id="Testimonials.nicReferral" />
+                  </div>
+                </div>
+                <div className={css.testimonialWrapper}>
+                  <div className={css.testimonialBox} onClick={handleRobClick}>
+                    <img
+                      src={robImage}
+                      alt="employee"
+                      className={css.sectionImage}
+                    />
+                    <div className={css.testimonialBio}>
+                      <div className={css.testimonialName}>
+                        <FormattedMessage id="Testimonials.rob" />
+                      </div>
+                      <div className={css.testimonialJonTitle}>
+                        <FormattedMessage id="Testimonials.robJobTitle" />
+                      </div>
+                    </div>
+                    <div className={css.quoteIconStyles}>
+                      <Quotes />
+                    </div>
+                  </div>
+                  <div className={css.testimonialReferral}>
+                    <FormattedMessage id="Testimonials.robReferral" />
                   </div>
                 </div>
               </div>
