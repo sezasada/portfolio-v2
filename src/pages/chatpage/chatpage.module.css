@@ -1,0 +1,53 @@
+@import "../../index.css";
+
+.pageStyles {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+  margin-right: 0;
+
+  @media (min-width: 768px) {
+    margin-left: var(--s-7);
+    margin-right: var(--s-7);
+  }
+}
+
+.navbarWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.desktopStyles {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.mobileStyles {
+  display: block;
+  width: 100%;
+  box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.05);
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.chatWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}

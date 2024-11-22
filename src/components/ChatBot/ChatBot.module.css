@@ -1,0 +1,55 @@
+@import "../../index.css";
+
+.containerStyles {
+  display: block;
+  background-color: var(--gray-1000);
+  padding-top: var(--s-14);
+  height: 100%;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: var(--s-72);
+  }
+}
+
+.headerStyles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: var(--white);
+  font-family: var(--font-base);
+  font-size: var(--text-3xl);
+  font-weight: 600;
+}
+
+.textBoxStyles {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: var(--s-4);
+  font-size: var(--text-base);
+  border-radius: var(--s-4);
+  border: none;
+  background-color: var(--gray-1100);
+  color: var(--white-200);
+}
+
+.textBoxStyles::placeholder {
+  color: var(--white-100);
+  border: none;
+}
+
+.textBoxStyles:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.inputStyles {
+  display: flex;
+  justify-content: center;
+  border: none;
+  width: 100%;
+}
