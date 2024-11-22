@@ -61,6 +61,7 @@
   "Resume.title": "Resume",
   "Skills.javascript": "JavaScript",
   "Skills.typescript": "TypeScript",
+  "Skills.csharp": "C#",
   "Skills.graphql": "GraphQL",
   "Skills.html": "HTML",
   "Skills.css": "CSS",

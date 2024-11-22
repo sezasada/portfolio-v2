@@ -5,6 +5,7 @@ import { ReactComponent as GraphqlIcon } from "../../assets/icons/graphql.svg";
 import { ReactComponent as CssIcon } from "../../assets/icons/css.svg";
 import { ReactComponent as JavascriptIcon } from "../../assets/icons/javascript.svg";
 import { ReactComponent as TypescriptIcon } from "../../assets/icons/typescript.svg";
+import { ReactComponent as CSharpIcon } from "../../assets/icons/csharp.svg";
 import { ReactComponent as AwsIcon } from "../../assets/icons/aws.svg";
 import { ReactComponent as ReduxIcon } from "../../assets/icons/redux.svg";
 import { ReactComponent as ReactIcon } from "../../assets/icons/react.svg";
@@ -28,6 +29,10 @@ const Skills = () => {
           <div className={css.skillWrapper}>
             <TypescriptIcon className={css.iconStyles} />
             <FormattedMessage id="Skills.typescript" />
+          </div>
+          <div className={css.skillWrapper}>
+            <CSharpIcon className={css.iconStyles} />
+            <FormattedMessage id="Skills.csharp" />
           </div>
           <div className={css.skillWrapper}>
             <GraphqlIcon className={css.iconStyles} />
