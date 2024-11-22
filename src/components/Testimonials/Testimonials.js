@@ -70,6 +70,13 @@ const Testimonials = () => {
       image: nicImage,
       link: "https://www.linkedin.com/in/nicdecastro/",
     },
+    {
+      name: <FormattedMessage id="Testimonials.rob" />,
+      jobTitle: <FormattedMessage id="Testimonials.robJobTitle" />,
+      referral: <FormattedMessage id="Testimonials.robReferral" />,
+      image: robImage,
+      link: "https://www.linkedin.com/in/rob-rotarius-97b49812/",
+    },
   ];
 
   return (
