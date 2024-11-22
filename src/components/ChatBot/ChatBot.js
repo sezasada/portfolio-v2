@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FormattedMessage } from "react-intl";
-
+import { ReactComponent as SendLight } from "../../assets/icons/send-light.svg";
+import { ReactComponent as SendDark } from "../../assets/icons/send-dark.svg";
 import css from "./ChatBot.module.css";
 
 const ChatBot = () => {
@@ -56,11 +57,21 @@ const ChatBot = () => {
 
   return (
     <div className={css.containerStyles}>
-      <div className={css.wrapperStyles}>
+      <div className={css.inputStyles}>
+        {response && <div className={css.responseStyles}>{response}</div>}
+        {error && <div className={css.errorStyles}>{error}</div>}
+      </div>
+      {!response && (
         <div className={css.headerStyles}>
           <FormattedMessage id="ChatBot.title" />
         </div>
-        <div className={css.inputStyles}>
+      )}
+      <div
+        className={`${css.inputStyles} ${
+          response ? css.inputStylesAtBottom : ""
+        }`}
+      >
+        <div className={css.inputWrapper}>
           <input
             type="text"
             placeholder={placeholder}
@@ -69,17 +80,21 @@ const ChatBot = () => {
             onChange={handleInputChange}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
-          />
-          <button
-            className={css.sendButton}
-            onClick={handleSendMessage}
             disabled={isLoading}
+          />
+          <div
+            onClick={!isLoading ? handleSendMessage : null}
+            className={css.iconWrapper}
           >
-            {isLoading ? "Sending..." : "Send"}
-          </button>
+            {isLoading ? (
+              <SendLight className={css.iconStyles} />
+            ) : inputValue ? (
+              <SendLight className={css.iconStyles} />
+            ) : (
+              <SendDark className={css.iconStyles} />
+            )}
+          </div>
         </div>
-        {response && <div className={css.responseStyles}>{response}</div>}
-        {error && <div className={css.errorStyles}>{error}</div>}
       </div>
     </div>
   );

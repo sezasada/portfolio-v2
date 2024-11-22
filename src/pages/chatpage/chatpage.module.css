@@ -12,11 +12,6 @@
   flex-direction: column;
   margin-left: 0;
   margin-right: 0;
-
-  @media (min-width: 768px) {
-    margin-left: var(--s-7);
-    margin-right: var(--s-7);
-  }
 }
 
 .navbarWrapper {
