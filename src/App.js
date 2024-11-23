@@ -6,11 +6,19 @@ import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const locale = "en";
+  const excludedIp = process.env.REACT_APP_EXCLUDED_IP;
 
   return (
     <BrowserRouter>
       <IntlProvider locale={locale} messages={enMessages}>
-        <Analytics />
+        <Analytics
+          beforeSend={(event) => {
+            if (event.ip === excludedIp) {
+              return null;
+            }
+            return event;
+          }}
+        />
         <Routes>
           <Route path="/" element={<Homepage />} />
         </Routes>
