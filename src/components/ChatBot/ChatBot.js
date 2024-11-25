@@ -1,15 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
 import { ReactComponent as SendLight } from "../../assets/icons/send-light.svg";
 import { ReactComponent as SendDark } from "../../assets/icons/send-dark.svg";
+import { ReactComponent as Spinner } from "../../assets/icons/spinner.svg";
 import css from "./ChatBot.module.css";
 
 const ChatBot = () => {
   const [inputValue, setInputValue] = useState("");
   const [placeholder, setPlaceholder] = useState("Message ChatGPT");
-  const [response, setResponse] = useState(null);
+  const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const messagesEndRef = useRef(null);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -34,6 +40,9 @@ const ChatBot = () => {
     setError("");
 
     try {
+      const userMessage = { role: "user", content: inputValue };
+      setMessages((prevMessages) => [...prevMessages, userMessage]);
+
       const res = await fetch("http://localhost:5228/chat", {
         method: "POST",
         headers: {
@@ -47,7 +56,11 @@ const ChatBot = () => {
       }
 
       const data = await res.json();
-      setResponse(data.response);
+      const botResponse = { role: "bot", content: data.response };
+
+      setMessages((prevMessages) => [...prevMessages, botResponse]);
+      setInputValue("");
+      setPlaceholder("Message ChatGPT");
     } catch (err) {
       setError(err.message);
     } finally {
@@ -55,20 +68,48 @@ const ChatBot = () => {
     }
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" && !isLoading) {
+      event.preventDefault();
+      handleSendMessage();
+    }
+  };
+
   return (
-    <div className={css.containerStyles}>
-      <div className={css.inputStyles}>
-        {response && <div className={css.responseStyles}>{response}</div>}
-        {error && <div className={css.errorStyles}>{error}</div>}
-      </div>
-      {!response && (
+    <div
+      className={`${css.containerStyles} ${
+        messages.length > 0 ? css.containerStylesAtTop : ""
+      }`}
+    >
+      {messages.length > 0 && (
+        <div className={css.messagesWrapper}>
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={
+                message.role === "user" ? css.userMessage : css.botMessage
+              }
+            >
+              {message.content}
+            </div>
+          ))}
+          {isLoading && (
+            <div className={css.botMessage}>
+              <Spinner className={css.spinnerStyles} />
+            </div>
+          )}
+          <div ref={messagesEndRef}></div>
+          {error && <div className={css.errorStyles}>{error}</div>}
+        </div>
+      )}
+      {messages.length === 0 && (
         <div className={css.headerStyles}>
           <FormattedMessage id="ChatBot.title" />
         </div>
       )}
       <div
         className={`${css.inputStyles} ${
-          response ? css.inputStylesAtBottom : ""
+          !messages.length === 0 ? css.inputStylesAtBottom : ""
         }`}
       >
         <div className={css.inputWrapper}>
@@ -78,6 +119,7 @@ const ChatBot = () => {
             className={css.textBoxStyles}
             value={inputValue}
             onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
             onFocus={handleInputFocus}
             onBlur={handleInputBlur}
             disabled={isLoading}
