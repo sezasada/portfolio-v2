@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FormattedMessage } from "react-intl";
+import { sendMessageToChatBot } from "../../api/chatApi";
 import { ReactComponent as SendLight } from "../../assets/icons/send-light.svg";
 import { ReactComponent as SendDark } from "../../assets/icons/send-dark.svg";
 import { ReactComponent as Spinner } from "../../assets/icons/spinner.svg";
@@ -43,20 +44,8 @@ const ChatBot = () => {
       const userMessage = { role: "user", content: inputValue };
       setMessages((prevMessages) => [...prevMessages, userMessage]);
 
-      const res = await fetch("http://localhost:5228/chat", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ message: inputValue }),
-      });
-
-      if (!res.ok) {
-        throw new Error(`Error: ${res.status} ${res.statusText}`);
-      }
-
-      const data = await res.json();
-      const botResponse = { role: "bot", content: data.response };
+      const response = await sendMessageToChatBot(inputValue);
+      const botResponse = { role: "bot", content: response };
 
       setMessages((prevMessages) => [...prevMessages, botResponse]);
       setInputValue("");
