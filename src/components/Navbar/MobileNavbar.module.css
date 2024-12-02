@@ -53,6 +53,8 @@
   display: flex;
   align-items: center;
   gap: var(--s-2);
+  width: var(--s-56);
+  text-align: left;
 }
 
 .topSectionStyles {
