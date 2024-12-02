@@ -8,9 +8,13 @@
   /* Colors */
   --black: #000;
   --white: #fff;
+  --white-100: #b4b4b4;
+  --white-200: #f7fafc;
+  --white-300: #2f2f2f;
 
   --beige: #e1ddd5;
   --hunter: #233933;
+
 
   --gray-100: #f7fafc;
   --gray-200: #edf2f7;
@@ -21,6 +25,8 @@
   --gray-700: #4a5569;
   --gray-800: #2d3748;
   --gray-900: #1a202c;
+  --gray-1000: #212121;
+  --gray-1100: #2f2f2f;
 
   --red-100: #f59a89;
   --red-300: #ffe9e5;
