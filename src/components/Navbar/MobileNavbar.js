@@ -30,6 +30,9 @@ const MobileNavbar = () => {
     },
   };
   
+  const homepageClick = () => {
+    window.location.href = "/";
+  };
 
   const handleMobileMenuClose = () => {
     setIsOpen(false);
@@ -56,7 +59,7 @@ const MobileNavbar = () => {
       <div className={css.navbarContainer}>
         <div className={css.topSection}>
           <div className={css.leftSideStyles}>
-            <div className={css.logoWrapper}>
+            <div className={css.logoWrapper} onClick={homepageClick}>
               <div className={css.logoStyles}>
                 <div className={css.iconWrapper}>
                   <Dev />

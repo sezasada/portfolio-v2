@@ -16,6 +16,10 @@ const Navbar = ({
     window.open("https://www.linkedin.com/in/sebastien-zasada/", "_blank");
   };
 
+  const homepageClick = () => {
+    window.location.href = "/";
+  };
+
   const handleGithubClick = () => {
     window.open("https://github.com/sezasada", "_blank");
   };
@@ -43,7 +47,7 @@ const Navbar = ({
     <div className={css.navbarContainer}>
       <div className={css.topSection}>
         <div className={css.leftSideStyles}>
-          <div className={css.logoWrapper}>
+          <div className={css.logoWrapper} onClick={homepageClick}>
             <div className={css.logoStyles}>
               <div className={css.iconWrapper}>
                 <Dev />
