@@ -5,7 +5,7 @@ import homepageVideo from "../../assets/videos/homepage.mp4";
 import listingVideo from "../../assets/videos/listingpage.mp4";
 import marketWatcherVideo from "../../assets/videos/marketWatchervideo.mp4";
 import Carousel from "../../design/Carousel/Carousel";
-import cryptoImage from "../../assets/images/contribution-images/crypto-exchange.png";
+import chatbotImage from "../../assets/images/contribution-images/chatbot-image.png";
 import farmworksImage from "../../assets/images/contribution-images/farmworks.png";
 
 import css from "./Contributions.module.css";
@@ -31,10 +31,10 @@ const Contributions = () => {
       title: "Contributions.listingPageRedesignTitle",
     },
     {
-      id: "Contributions.cryptoExchange",
-      image: cryptoImage,
-      title: "Contributions.cryptoExchangeTitle",
-      code: "https://github.com/sezasada/cryptoexchange-v2",
+      id: "Contributions.chatbot",
+      image: chatbotImage,
+      title: "Contributions.chatbotTitle",
+      link: "https://www.sebastienzasada.com/chatbot",
     },
     {
       id: "Contributions.marketWatcher",

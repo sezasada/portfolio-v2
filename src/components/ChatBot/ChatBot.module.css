@@ -41,6 +41,7 @@
 .messagesWrapper {
   margin: 0;
   max-width: 600px;
+  min-width: 90vw;
   padding: 0;
   border-radius: var(--s-4);
   color: var(--white);
@@ -53,6 +54,8 @@
   @media (min-width: 768px) {
     padding: var(--s-3);
     margin: var(--s-6) auto;
+    max-width: 600px;
+    min-width: 600px;
   }
 }
 
@@ -81,6 +84,23 @@
   @media (min-width: 768px) {
     padding: var(--s-5);
   }
+}
+
+
+.botMessageWrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+}
+
+.botIconStyles {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  border: 1px solid var(--gray-700);
+  border-radius: 50%;
+  padding: var(--s-2);
+  margin-top: -10px;
 }
 
 .headerStyles {
@@ -149,7 +169,6 @@
     transform: rotate(360deg);
   }
 }
-
 
 .iconWrapper {
   display: flex;
