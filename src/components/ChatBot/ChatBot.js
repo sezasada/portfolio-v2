@@ -4,6 +4,7 @@ import { sendMessageToChatBot } from "../../api/chatApi";
 import { ReactComponent as SendLight } from "../../assets/icons/send-light.svg";
 import { ReactComponent as SendDark } from "../../assets/icons/send-dark.svg";
 import { ReactComponent as Spinner } from "../../assets/icons/spinner.svg";
+import { ReactComponent as Bot } from "../../assets/icons/bot.svg";
 import css from "./ChatBot.module.css";
 
 const ChatBot = () => {
@@ -37,19 +38,18 @@ const ChatBot = () => {
       return;
     }
 
+    const userMessage = { role: "user", content: inputValue };
+    setMessages((prevMessages) => [...prevMessages, userMessage]);
+    setInputValue("");
+    setPlaceholder("Message ChatGPT");
     setIsLoading(true);
     setError("");
 
     try {
-      const userMessage = { role: "user", content: inputValue };
-      setMessages((prevMessages) => [...prevMessages, userMessage]);
-
       const response = await sendMessageToChatBot(inputValue);
       const botResponse = { role: "bot", content: response };
 
       setMessages((prevMessages) => [...prevMessages, botResponse]);
-      setInputValue("");
-      setPlaceholder("Message ChatGPT");
     } catch (err) {
       setError(err.message);
     } finally {
@@ -79,7 +79,13 @@ const ChatBot = () => {
                 message.role === "user" ? css.userMessage : css.botMessage
               }
             >
-              {message.content}
+              {message.role === "bot" && (
+                <div className={css.botMessageWrapper}>
+                  <Bot className={css.botIconStyles} />
+                  <div>{message.content}</div>
+                </div>
+              )}
+              {message.role === "user" && <div>{message.content}</div>}
             </div>
           ))}
           {isLoading && (
