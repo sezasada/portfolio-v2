@@ -3,7 +3,6 @@ import { FormattedMessage } from "react-intl";
 import { sendMessageToChatBot } from "../../api/chatApi";
 import { ReactComponent as SendLight } from "../../assets/icons/send-light.svg";
 import { ReactComponent as SendDark } from "../../assets/icons/send-dark.svg";
-import { ReactComponent as Spinner } from "../../assets/icons/spinner.svg";
 import { ReactComponent as Bot } from "../../assets/icons/bot.svg";
 import css from "./ChatBot.module.css";
 
@@ -13,11 +12,12 @@ const ChatBot = () => {
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [partialMessage, setPartialMessage] = useState("");
   const messagesEndRef = useRef(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages]);
+  }, [messages, partialMessage]);
 
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
@@ -29,6 +29,17 @@ const ChatBot = () => {
   const handleInputBlur = () => {
     if (!inputValue) {
       setPlaceholder("Message ChatGPT");
+    }
+  };
+
+  const simulateTyping = async (response) => {
+    let partialResponse = "";
+    const typingSpeed = response.length > 50 ? 10 : 20;
+
+    for (const char of response) {
+      partialResponse += char;
+      setPartialMessage(partialResponse);
+      await new Promise((resolve) => setTimeout(resolve, typingSpeed));
     }
   };
 
@@ -44,12 +55,15 @@ const ChatBot = () => {
     setPlaceholder("Message ChatGPT");
     setIsLoading(true);
     setError("");
+    setPartialMessage("");
 
     try {
       const response = await sendMessageToChatBot(inputValue);
-      const botResponse = { role: "bot", content: response };
+      await simulateTyping(response);
+      setPartialMessage("");
 
-      setMessages((prevMessages) => [...prevMessages, botResponse]);
+      const botMessage = { role: "bot", content: response };
+      setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (err) {
       setError(err.message);
     } finally {
@@ -88,9 +102,15 @@ const ChatBot = () => {
               {message.role === "user" && <div>{message.content}</div>}
             </div>
           ))}
-          {isLoading && (
+          {partialMessage && (
             <div className={css.botMessage}>
-              <Spinner className={css.spinnerStyles} />
+              <div className={css.botMessageWrapper}>
+                <Bot className={css.botIconStyles} />
+                <div className={css.partialMessage}>
+                  {partialMessage}
+                  <span className={css.blinkingCursor}>|</span>
+                </div>
+              </div>
             </div>
           )}
           <div ref={messagesEndRef}></div>

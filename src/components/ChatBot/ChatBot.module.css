@@ -1,5 +1,36 @@
 @import "../../index.css";
 
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.partialMessage {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  color: var(--white);
+  white-space: pre-wrap;
+}
+
+.botMessageWrapper .partialMessage {
+  font-family: var(--font-base);
+  font-size: var(--text-base);
+  color: var(--white);
+}
+
+.botMessageWrapper .blinkingCursor {
+  display: inline-block;
+  width: 2px;
+  background-color: var(--white);
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
 .containerStyles {
   display: flex;
   flex-direction: column;
@@ -85,7 +116,6 @@
     padding: var(--s-5);
   }
 }
-
 
 .botMessageWrapper {
   display: flex;
