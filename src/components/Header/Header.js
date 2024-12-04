@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { SecondaryButton } from "../../design/Button/Button";
-import profileImage from "../../assets/images/header-images/profile-image.png";
+import profileImage from "../../assets/images/header-images/profile-image.webp";
 import css from "./Header.module.css";
 
 const Header = () => {
@@ -36,6 +36,7 @@ const Header = () => {
               src={profileImage}
               alt="sebastien"
               className={css.headerImage}
+              loading="lazy"
             />
           </div>
         </div>

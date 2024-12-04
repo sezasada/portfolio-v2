@@ -18,7 +18,12 @@ import css from "./ScrollingCarousel.module.css";
 const CarouselContext = React.createContext(null);
 
 // Define the Step component as before
-export const Step = ({ children, index, className, onClick }) => {
+export const Step = ({
+  children,
+  index,
+  className = undefined,
+  onClick = () => {},
+}) => {
   const { carousel, dispatch } = useContext(CarouselContext);
   const [ref, inView] = useInView({
     threshold: 0.75,
@@ -46,11 +51,6 @@ export const Step = ({ children, index, className, onClick }) => {
 Step.propTypes = {
   className: propTypes.string,
   onClick: propTypes.func,
-};
-
-Step.defaultProps = {
-  className: undefined,
-  onClick: () => {},
 };
 
 // Define the reducer as before
