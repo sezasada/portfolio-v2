@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { IntlProvider } from "react-intl";
 import enMessages from "./translations/en.json";
 import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
 function App() {
   const locale = "en";
@@ -12,7 +11,6 @@ function App() {
     <BrowserRouter>
       <IntlProvider locale={locale} messages={enMessages}>
         <Analytics />
-        <SpeedInsights />
         <Routes>
           <Route path="/" element={<Homepage />} />
         </Routes>
