@@ -71,7 +71,7 @@
 .contactTitleStyles {
   font-family: var(--font-base);
   font-size: var(--text-sm);
-  color: var(--gray-600);
+  color: var(--gray-700);
   font-weight: var(--font-extra-light);
   margin-bottom: var(--s-2);
 }

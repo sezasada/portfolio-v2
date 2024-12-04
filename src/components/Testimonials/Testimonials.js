@@ -90,7 +90,11 @@ const Testimonials = () => {
             <FormattedMessage id="Testimonials.subtitle" />
           </div>
           <hr className={css.divider} />
-          <div className={css.carouselContainer}>
+          <div
+            className={css.carouselContainer}
+            role="region"
+            aria-label="Testimonials Carousel"
+          >
             <ScrollingCarousel className={css.carousel}>
               {testimonials.map((testimonial, index) => (
                 <Step key={index} className={css.carouselWrapper}>
@@ -98,10 +102,11 @@ const Testimonials = () => {
                     <div
                       className={css.testimonialBox}
                       onClick={() => window.open(testimonial.link, "_blank")}
+                      role="button"
                     >
                       <img
                         src={testimonial.image}
-                        alt={testimonial.name}
+                        alt={`${testimonial.name}, ${testimonial.jobTitle}`}
                         className={css.sectionImage}
                       />
                       <div className={css.testimonialBio}>

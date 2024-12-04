@@ -199,7 +199,7 @@
 .testimonialReferral {
   font-size: var(--text-sm);
   font-family: var(--font-base);
-  color: var(--gray-600);
+  color: var(--gray-700);
   font-style: italic;
   text-align: left;
 }

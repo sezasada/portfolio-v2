@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
-import css from './Button.module.css';
+import css from "./Button.module.css";
 
 class Button extends Component {
   constructor(props) {
@@ -45,7 +45,12 @@ class Button extends Component {
 
     return (
       // eslint-disable-next-line react/button-has-type
-      <button data-testid={dataTestId} className={classes} {...rest} disabled={buttonDisabled}>
+      <button
+        data-testid={dataTestId}
+        className={classes}
+        {...rest}
+        disabled={buttonDisabled}
+      >
         {content}
       </button>
     );
@@ -83,11 +88,10 @@ Button.propTypes = {
 export default Button;
 
 export const PrimaryButton = ({
-  component: RenderedComponent,
-
-  isSmall,
-  className,
-  dataTestId,
+  component: RenderedComponent = Button,
+  isSmall = false,
+  className = null,
+  dataTestId = null,
   ...props
 }) => {
   const classes = classNames(
@@ -108,16 +112,12 @@ export const PrimaryButton = ({
   );
 };
 
-PrimaryButton.displayName = 'PrimaryButton';
-PrimaryButton.defaultProps = {
-  component: Button,
-};
+PrimaryButton.displayName = "PrimaryButton";
 
 export const SecondaryButton = ({
-  component: RenderedComponent,
-
-  isSmall,
-  className,
+  component: RenderedComponent = Button,
+  isSmall = false,
+  className = null,
   ...props
 }) => {
   const classes = classNames(
@@ -128,14 +128,23 @@ export const SecondaryButton = ({
     className
   );
 
-  return <RenderedComponent rootClassName={css.root} className={classes} {...props} />;
-};
-SecondaryButton.displayName = 'SecondaryButton';
-SecondaryButton.defaultProps = {
-  component: Button,
+  return (
+    <RenderedComponent
+      rootClassName={css.root}
+      className={classes}
+      {...props}
+    />
+  );
 };
 
-export const TertiaryButton = ({ component: RenderedComponent, isSmall, className, ...props }) => {
+SecondaryButton.displayName = "SecondaryButton";
+
+export const TertiaryButton = ({
+  component: RenderedComponent,
+  isSmall,
+  className,
+  ...props
+}) => {
   const classes = classNames(
     css.tertiaryButton,
     {
@@ -144,9 +153,15 @@ export const TertiaryButton = ({ component: RenderedComponent, isSmall, classNam
     className
   );
 
-  return <RenderedComponent rootClassName={css.root} className={classes} {...props} />;
+  return (
+    <RenderedComponent
+      rootClassName={css.root}
+      className={classes}
+      {...props}
+    />
+  );
 };
-TertiaryButton.displayName = 'TertiaryButton';
+TertiaryButton.displayName = "TertiaryButton";
 TertiaryButton.defaultProps = {
   component: Button,
 };
@@ -167,32 +182,48 @@ export const QuaternaryButton = ({
     className
   );
 
-  return <RenderedComponent rootClassName={css.root} className={classes} {...props} />;
+  return (
+    <RenderedComponent
+      rootClassName={css.root}
+      className={classes}
+      {...props}
+    />
+  );
 };
-QuaternaryButton.displayName = 'QuaternaryButton';
+QuaternaryButton.displayName = "QuaternaryButton";
 QuaternaryButton.defaultProps = {
   component: Button,
 };
 
-export const InlineTextButton = props => {
+export const InlineTextButton = (props) => {
   const { rootClassName } = props;
-  const classes = classNames(css.inlineTextButtonRoot, rootClassName, css.inlineTextButton);
+  const classes = classNames(
+    css.inlineTextButtonRoot,
+    rootClassName,
+    css.inlineTextButton
+  );
 
   return <Button {...props} rootClassName={classes} />;
 };
-InlineTextButton.displayName = 'InlineTextButton';
+InlineTextButton.displayName = "InlineTextButton";
 
-export const FacebookLoginButton = props => {
+export const FacebookLoginButton = (props) => {
   const { rootClassName } = props;
-  const classes = classNames(rootClassName || css.socialButtonRoot, css.facebookButton);
+  const classes = classNames(
+    rootClassName || css.socialButtonRoot,
+    css.facebookButton
+  );
   return <Button {...props} rootClassName={classes} />;
 };
-FacebookLoginButton.displayName = 'FacebookLoginButton';
+FacebookLoginButton.displayName = "FacebookLoginButton";
 
-export const GoogleLoginButton = props => {
+export const GoogleLoginButton = (props) => {
   const { rootClassName } = props;
-  const classes = classNames(rootClassName || css.socialButtonRoot, css.googleButton);
+  const classes = classNames(
+    rootClassName || css.socialButtonRoot,
+    css.googleButton
+  );
   return <Button {...props} rootClassName={classes} />;
 };
 
-GoogleLoginButton.displayName = 'GoogleLoginButton';
+GoogleLoginButton.displayName = "GoogleLoginButton";

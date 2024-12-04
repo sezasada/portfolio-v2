@@ -96,7 +96,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
-  position: absolute; 
+  position: absolute;
   bottom: 0;
   margin-right: 0;
 
@@ -125,7 +125,12 @@
 }
 
 .headerImage {
-  width: auto;
-  height: 100%;
+  width: 445px;
+  height: 445px;
   object-fit: contain;
+
+  @media (min-width: 768px) {
+    width: 600px;
+    height: 600px;
+  }
 }
