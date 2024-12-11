@@ -89,6 +89,8 @@ const Homepage = () => {
               scrollToContributions={scrollToContributions}
               scrollToTestimonials={scrollToTestimonials}
               scrollTocontactMe={scrollTocontactMe}
+              showChatGPT={true}
+              showHomepage={false}
             />
           </div>
         </div>

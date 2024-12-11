@@ -61,6 +61,8 @@
   "Navbar.github": "GitHub",
   "Navbar.instagram": "Instagram",
   "Resume.title": "Resume",
+  "Navbar.chatGPT": "Chatbot",
+  "Navbar.homepage": "Homepage",
   "Skills.javascript": "JavaScript",
   "Skills.typescript": "TypeScript",
   "Skills.csharp": "C#",

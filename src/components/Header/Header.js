@@ -8,6 +8,7 @@ const Header = () => {
   const handleContactClick = () => {
     window.location.href = "mailto:sezasada@icloud.com";
   };
+
   return (
     <div className={css.containerStyles}>
       <div className={css.wrapperStyles}>

@@ -34,6 +34,8 @@ const ChatPage = () => {
               scrollToContributions={scrollToContributions}
               scrollToTestimonials={scrollToTestimonials}
               scrollTocontactMe={scrollTocontactMe}
+              showChatGPT={false}
+              showHomepage={true}
             />
           </div>
         </div>

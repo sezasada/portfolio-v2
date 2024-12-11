@@ -34,7 +34,6 @@
 
   @media (min-width: 768px) {
     width: 60%;
-    height: auto;
   }
 }
 
@@ -130,6 +129,11 @@
   object-fit: contain;
 
   @media (min-width: 768px) {
+    width: 500px;
+    height: 500px;
+  }
+
+  @media (min-width: 1280px) {
     width: 600px;
     height: 600px;
   }

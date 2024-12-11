@@ -11,6 +11,8 @@ const Navbar = ({
   scrollToContributions,
   scrollToTestimonials,
   scrollTocontactMe,
+  showChatGPT,
+  showHomepage,
 }) => {
   const handleLinkedinClick = () => {
     window.open("https://www.linkedin.com/in/sebastien-zasada/", "_blank");
@@ -34,6 +36,14 @@ const Navbar = ({
 
   const handlePhoneClick = () => {
     window.location.href = "tel:+12187900487";
+  };
+
+  const handleGPTClick = () => {
+    window.open("https://www.sebastienzasada.com/chatbot", "_blank");
+  };
+
+  const handleHomepageClick = () => {
+    window.open("https://www.sebastienzasada.com/", "_blank");
   };
 
   const handleResumeClick = () => {
@@ -106,6 +116,16 @@ const Navbar = ({
           <div className={css.navItemStyles} onClick={handleResumeClick}>
             <FormattedMessage id="Resume.title" />
           </div>
+          {showChatGPT && (
+            <div className={css.navItemStyles} onClick={handleGPTClick}>
+              <FormattedMessage id="Navbar.chatGPT" />
+            </div>
+          )}
+          {showHomepage && (
+            <div className={css.navItemStyles} onClick={handleHomepageClick}>
+              <FormattedMessage id="Navbar.homepage" />
+            </div>
+          )}
         </div>
         <div className={css.iconSection}>
           <div className={css.iconStyles} onClick={handleInstagramClick}>
