@@ -1,5 +1,15 @@
 @import "../../index.css";
 
+.pageStyle {
+  display: flex; 
+  justify-content: center;
+  width: 100%;
+}
+
+.pageContainer {
+  max-width: 2000px;
+}
+
 .pageWrapper {
   margin-left: 0;
   margin-right: 0;

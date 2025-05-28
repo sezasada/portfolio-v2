@@ -72,7 +72,8 @@ const Homepage = () => {
   }, [location.hash]);
 
   return (
-    <>
+    <div className={css.pageStyle}>
+    <div className={css.pageContainer}>
       <div className={css.mobileStyles}>
         <MobileNavbar
           scrollToAboutMe={scrollToAboutMe}
@@ -119,7 +120,8 @@ const Homepage = () => {
           />
         </div>
       </div>
-    </>
+    </div>
+    </div>
   );
 };
 
