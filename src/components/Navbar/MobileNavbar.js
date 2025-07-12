@@ -91,6 +91,7 @@ const MobileNavbar = () => {
         <Modal
           isOpen={isOpen}
           onRequestClose={handleMobileMenuClose}
+          appElement={document.getElementById("root")} 
           style={customStyles}
         >
           <MobileMenu setIsOpen={setIsOpen} />

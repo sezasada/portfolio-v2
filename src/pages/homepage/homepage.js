@@ -73,19 +73,46 @@ const Homepage = () => {
 
   return (
     <div className={css.pageStyle}>
-    <div className={css.pageContainer}>
-      <div className={css.mobileStyles}>
-        <MobileNavbar
-          scrollToAboutMe={scrollToAboutMe}
-          scrollToContributions={scrollToContributions}
-          scrollToTestimonials={scrollToTestimonials}
-          scrollTocontactMe={scrollTocontactMe}
-        />
-      </div>
-      <div className={css.pageWrapper}>
-        <div className={css.navbarWrapper}>
-          <div className={css.desktopStyles}>
-            <Navbar
+      <div className={css.pageContainer}>
+        <div className={css.mobileStyles}>
+          <MobileNavbar
+            scrollToAboutMe={scrollToAboutMe}
+            scrollToContributions={scrollToContributions}
+            scrollToTestimonials={scrollToTestimonials}
+            scrollTocontactMe={scrollTocontactMe}
+          />
+        </div>
+        <div className={css.pageWrapper}>
+          <div className={css.navbarWrapper}>
+            <div className={css.desktopStyles}>
+              <Navbar
+                scrollToAboutMe={scrollToAboutMe}
+                scrollToContributions={scrollToContributions}
+                scrollToTestimonials={scrollToTestimonials}
+                scrollTocontactMe={scrollTocontactMe}
+              />
+            </div>
+          </div>
+          <div className={css.headerWrapper}>
+            <Header />
+          </div>
+          <div ref={aboutMeRef}>
+            <AboutMe scrollToContributions={scrollToContributions} />
+          </div>
+          <div>
+            <Skills />
+          </div>
+          <div ref={contributionsRef}>
+            <Contributions />
+          </div>
+          <div ref={testimonialsRef}>
+            <Testimonials />
+          </div>
+          <div ref={contactMeRef}>
+            <ContactMe />
+          </div>
+          <div>
+            <Footer
               scrollToAboutMe={scrollToAboutMe}
               scrollToContributions={scrollToContributions}
               scrollToTestimonials={scrollToTestimonials}
@@ -93,34 +120,7 @@ const Homepage = () => {
             />
           </div>
         </div>
-        <div className={css.headerWrapper}>
-          <Header />
-        </div>
-        <div ref={aboutMeRef}>
-          <AboutMe scrollToContributions={scrollToContributions} />
-        </div>
-        <div>
-          <Skills />
-        </div>
-        <div ref={contributionsRef}>
-          <Contributions />
-        </div>
-        <div ref={testimonialsRef}>
-          <Testimonials />
-        </div>
-        <div ref={contactMeRef}>
-          <ContactMe />
-        </div>
-        <div>
-          <Footer
-            scrollToAboutMe={scrollToAboutMe}
-            scrollToContributions={scrollToContributions}
-            scrollToTestimonials={scrollToTestimonials}
-            scrollTocontactMe={scrollTocontactMe}
-          />
-        </div>
       </div>
-    </div>
     </div>
   );
 };

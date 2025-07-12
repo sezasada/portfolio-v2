@@ -22,23 +22,25 @@ const ChatPage = () => {
   };
 
   return (
-    <div className={css.pageStyles}>
-      <div className={css.mobileStyles}>
-        <MobileNavbar />
-      </div>
-      <div className={css.pageWrapper}>
-        <div className={css.navbarWrapper}>
-          <div className={css.desktopStyles}>
-            <Navbar
-              scrollToAboutMe={scrollToAboutMe}
-              scrollToContributions={scrollToContributions}
-              scrollToTestimonials={scrollToTestimonials}
-              scrollTocontactMe={scrollTocontactMe}
-            />
-          </div>
+    <div className={css.pageContainer}>
+      <div className={css.pageStyles}>
+        <div className={css.mobileStyles}>
+          <MobileNavbar />
         </div>
-        <div className={css.chatWrapper}>
-          <ChatBot />
+        <div className={css.pageWrapper}>
+          <div className={css.navbarWrapper}>
+            <div className={css.desktopStyles}>
+              <Navbar
+                scrollToAboutMe={scrollToAboutMe}
+                scrollToContributions={scrollToContributions}
+                scrollToTestimonials={scrollToTestimonials}
+                scrollTocontactMe={scrollTocontactMe}
+              />
+            </div>
+          </div>
+          <div className={css.chatWrapper}>
+            <ChatBot />
+          </div>
         </div>
       </div>
     </div>
