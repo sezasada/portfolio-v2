@@ -8,8 +8,12 @@
 .mediaWrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
+  max-width: 1200px;
+  gap: var(--s-4);
 }
 
 .slide {
@@ -24,12 +28,13 @@
   margin-bottom: var(--s-6);
 
   @media (min-width: 768px) {
-    flex: 50%;
-    margin: var(--s-2);
+    flex: 1 1 48%;
+    margin-left: var(--s-3);
   }
 
   @media (min-width: 1024px) {
-    flex: 30%;
+    flex: 1 1 31%;
+    max-width: 45%;
   }
 }
 
@@ -75,4 +80,24 @@
   &:hover {
     transform: scale(1.05);
   }
+}
+
+.truncated {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.toggleButton {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: var(--font-base);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  margin-top: var(--s-2);
+  padding: 0;
+  text-decoration: underline;
+  align-self: flex-start;
 }

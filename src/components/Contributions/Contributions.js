@@ -7,11 +7,17 @@ import marketWatcherVideo from "../../assets/videos/marketWatchervideo.mp4";
 import Carousel from "../../design/Carousel/Carousel";
 import chatbotImage from "../../assets/images/contribution-images/chatbot-image.png";
 import farmworksImage from "../../assets/images/contribution-images/farmworks.png";
+import confidentialImage from "../../assets/images/contribution-images/confidential.png";
 
 import css from "./Contributions.module.css";
 
 const Contributions = () => {
-  const landtrustContributions = [
+  const contributions = [
+    {
+      id: "Contributions.scheels",
+      image: confidentialImage,
+      title: "Contributions.scheelsTitle",
+    },
     {
       id: "Contributions.fieldnotes",
       video: fieldnotesVideo,
@@ -67,7 +73,7 @@ const Contributions = () => {
         <hr className={css.divider} />
         <div className={css.carouselContainer}>
           <div className={css.carouselStyles}>
-            <Carousel items={landtrustContributions} id="landtrustCarousel" />
+            <Carousel items={contributions} id="contribution-carousel" />
           </div>
         </div>
       </div>
