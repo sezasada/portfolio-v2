@@ -27,7 +27,7 @@ const Footer = ({
 
   const handleResumeClick = () => {
     window.open(
-      "https://docs.google.com/document/d/e/2PACX-1vTAOqx2eFUHGAj6mZ4LoVfa62gjUn4XzHW2BWVgHfKL7QuBsIGOa7HjhRVNI40SfA/pub",
+      "https://docs.google.com/document/d/e/2PACX-1vTTlEfuFBUaULN3Id0hqPC2zaocJCux1A9Ra8_tfAChoiwyCSiAaByljbpNELOLdMnopUmt00HUlCX8/pub",
       "_blank"
     );
   };
