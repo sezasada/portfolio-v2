@@ -10,10 +10,6 @@
   }
 }
 
-.pageContainer {
-  max-width: 1800px;
-}
-
 .pageWrapper {
   margin-left: 0;
   margin-right: 0;
@@ -28,6 +24,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .desktopStyles {
@@ -69,4 +67,11 @@
     margin-bottom: var(--s-20);
     height: 83vh;
   }
+}
+
+.aboutMeWrapper {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin: 0 auto; 
 }

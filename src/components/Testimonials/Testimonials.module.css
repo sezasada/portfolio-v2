@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 2000px;
 }
 
 .bodyStyles {
@@ -136,7 +137,16 @@
   margin-left: var(--s-4);
 
   @media (min-width: 768px) {
-    width: var(--s-100);
+    max-width: var(--s-100);
+    min-width: var(--s-80);
+    padding: var(--s-10);
+    margin-right: var(--s-10);
+    margin-left: var(--s-10);
+    margin-bottom: var(--s-10);
+  }
+
+  @media (min-width: 1190px) {
+    min-width: var(--s-100);
     padding: var(--s-10);
     margin-right: var(--s-10);
     margin-left: var(--s-10);
